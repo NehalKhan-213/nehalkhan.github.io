@@ -5,615 +5,206 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Nehal Khan | Geological Technology & Data Science</title>
 <meta name="description" content="Nehal Khan – Final Year M.Tech student at IIT Kanpur specializing in Geological Technology, Data Science, and Machine Learning.">
-<script nonce="xu2Gyx3CPpPRohU1" type="text/javascript" src="//self.adblockultimate.net/manager.js?tm=1777827582&amp;lg=true" guid="{409511E6-E8CA-4914-944A-EE033CB764B5}" inwhitelist="false" status="true" autohide="true"></script><link rel="preconnect" href="https://fonts.googleapis.com">
+<script nonce="xu2Gyx3CPpPRohU1" type="text/javascript" src="//self.adblockultimate.net/manager.js?tm=1777848187&amp;lg=true" guid="{409511E6-E8CA-4914-944A-EE033CB764B5}" inwhitelist="false" status="true" autohide="true"></script><link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet">
 <style>
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
   :root {
-    --stone: #1a1814;
-    --sand: #f5f0e8;
-    --clay: #c17f3e;
-    --teal: #2a6b6b;
-    --warm-gray: #6b6460;
-    --light-clay: #f0e4d0;
-    --dark-clay: #8a5a28;
-    --off-white: #faf8f4;
-    --section-pad: 5rem 2rem;
+    --stone: #1a1814; --clay: #c17f3e; --teal: #2a6b6b;
+    --warm-gray: #6b6460; --light-clay: #f0e4d0; --dark-clay: #8a5a28;
+    --off-white: #faf8f4; --section-pad: 5rem 2rem;
   }
-
   html { scroll-behavior: smooth; }
-
-  body {
-    font-family: 'DM Sans', sans-serif;
-    background: var(--off-white);
-    color: var(--stone);
-    line-height: 1.7;
-    overflow-x: hidden;
-  }
+  body { font-family: 'DM Sans', sans-serif; background: var(--off-white); color: var(--stone); line-height: 1.7; overflow-x: hidden; }
 
   /* NAV */
-  nav {
-    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
-    display: flex; justify-content: space-between; align-items: center;
-    padding: 1.2rem 3rem;
-    background: rgba(250, 248, 244, 0.92);
-    backdrop-filter: blur(8px);
-    border-bottom: 1px solid rgba(193, 127, 62, 0.15);
-  }
-
-  .nav-logo {
-    font-family: 'Playfair Display', serif;
-    font-size: 1.3rem;
-    font-weight: 700;
-    color: var(--clay);
-    letter-spacing: 0.02em;
-    text-decoration: none;
-  }
-
-  .nav-links { display: flex; gap: 2rem; list-style: none; }
-  .nav-links a {
-    text-decoration: none;
-    color: var(--warm-gray);
-    font-size: 0.85rem;
-    font-weight: 500;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-    transition: color 0.2s;
-  }
-  .nav-links a:hover { color: var(--clay); }
+  nav { position:fixed; top:0; left:0; right:0; z-index:100; display:flex; justify-content:space-between; align-items:center; padding:1.1rem 3rem; background:rgba(250,248,244,0.93); backdrop-filter:blur(8px); border-bottom:1px solid rgba(193,127,62,0.15); }
+  .nav-logo { font-family:'Playfair Display',serif; font-size:1.3rem; font-weight:700; color:var(--clay); text-decoration:none; }
+  .nav-links { display:flex; gap:1.6rem; list-style:none; flex-wrap:wrap; }
+  .nav-links a { text-decoration:none; color:var(--warm-gray); font-size:0.8rem; font-weight:500; letter-spacing:0.08em; text-transform:uppercase; transition:color 0.2s; }
+  .nav-links a:hover { color:var(--clay); }
 
   /* HERO */
-  #hero {
-    min-height: 100vh;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    align-items: center;
-    padding: 6rem 4rem 4rem;
-    background: linear-gradient(135deg, var(--off-white) 60%, var(--light-clay) 100%);
-    position: relative;
-    overflow: hidden;
-  }
+  #hero { min-height:100vh; display:grid; grid-template-columns:1fr 1fr; align-items:center; padding:6rem 4rem 4rem; background:linear-gradient(135deg,var(--off-white) 60%,var(--light-clay) 100%); position:relative; overflow:hidden; }
+  #hero::before { content:''; position:absolute; top:-20%; right:-10%; width:600px; height:600px; background:radial-gradient(circle,rgba(193,127,62,0.1) 0%,transparent 70%); pointer-events:none; }
+  .hero-text { max-width:560px; }
+  .hero-badge { display:inline-block; background:var(--clay); color:#fff; font-size:0.72rem; font-weight:500; letter-spacing:0.15em; text-transform:uppercase; padding:0.4rem 1rem; border-radius:2px; margin-bottom:1.5rem; }
+  .hero-name { font-family:'Playfair Display',serif; font-size:clamp(2.8rem,5vw,4.5rem); font-weight:700; line-height:1.1; color:var(--stone); margin-bottom:0.5rem; }
+  .hero-name span { color:var(--clay); }
+  .hero-title { font-size:1.1rem; font-weight:300; color:var(--warm-gray); margin-bottom:1.5rem; }
+  .hero-desc { font-size:1rem; color:var(--stone); opacity:0.75; margin-bottom:2.5rem; max-width:460px; line-height:1.8; }
+  .hero-cta { display:flex; gap:1rem; flex-wrap:wrap; }
+  .btn-primary { display:inline-block; background:var(--clay); color:#fff; padding:0.85rem 2rem; font-size:0.9rem; font-weight:500; text-decoration:none; border-radius:4px; transition:background 0.2s,transform 0.15s; }
+  .btn-primary:hover { background:var(--dark-clay); transform:translateY(-1px); }
+  .btn-outline { display:inline-block; border:1.5px solid var(--clay); color:var(--clay); padding:0.85rem 2rem; font-size:0.9rem; font-weight:500; text-decoration:none; border-radius:4px; transition:background 0.2s,transform 0.15s; }
+  .btn-outline:hover { background:var(--light-clay); transform:translateY(-1px); }
 
-  #hero::before {
-    content: '';
-    position: absolute; top: -20%; right: -10%;
-    width: 600px; height: 600px;
-    background: radial-gradient(circle, rgba(193,127,62,0.1) 0%, transparent 70%);
-    pointer-events: none;
-  }
+  .hero-photo-wrap { display:flex; justify-content:center; align-items:center; position:relative; }
+  .photo-frame { width:340px; height:400px; border-radius:12px 12px 80px 12px; background:var(--light-clay); border:3px solid rgba(193,127,62,0.3); display:flex; flex-direction:column; align-items:center; justify-content:center; gap:1rem; position:relative; overflow:hidden; }
+  .photo-frame img { width:100%; height:100%; object-fit:cover; }
+  .photo-placeholder { display:flex; flex-direction:column; align-items:center; gap:0.75rem; }
+  .photo-initials { width:100px; height:100px; border-radius:50%; background:var(--clay); display:flex; align-items:center; justify-content:center; font-family:'Playfair Display',serif; font-size:2.2rem; font-weight:700; color:#fff; }
+  .photo-hint { font-size:0.8rem; color:var(--warm-gray); text-align:center; max-width:200px; line-height:1.5; }
+  .photo-badge { position:absolute; bottom:-1.2rem; left:-1.2rem; background:var(--teal); color:#fff; padding:0.8rem 1.2rem; border-radius:8px; font-size:0.8rem; font-weight:500; line-height:1.4; }
+  .photo-badge strong { display:block; font-size:1.1rem; }
 
-  .hero-text { max-width: 560px; }
+  /* STATS */
+  .stats-bar { background:var(--stone); padding:2rem 4rem; display:grid; grid-template-columns:repeat(4,1fr); gap:1rem; text-align:center; }
+  .stat { border-right:1px solid rgba(255,255,255,0.1); }
+  .stat:last-child { border-right:none; }
+  .stat-num { font-family:'Playfair Display',serif; font-size:2rem; color:var(--clay); font-weight:700; }
+  .stat-label { font-size:0.78rem; color:rgba(255,255,255,0.5); text-transform:uppercase; letter-spacing:0.08em; margin-top:0.2rem; }
 
-  .hero-badge {
-    display: inline-block;
-    background: var(--clay);
-    color: #fff;
-    font-size: 0.72rem;
-    font-weight: 500;
-    letter-spacing: 0.15em;
-    text-transform: uppercase;
-    padding: 0.4rem 1rem;
-    border-radius: 2px;
-    margin-bottom: 1.5rem;
-  }
-
-  .hero-name {
-    font-family: 'Playfair Display', serif;
-    font-size: clamp(2.8rem, 5vw, 4.5rem);
-    font-weight: 700;
-    line-height: 1.1;
-    color: var(--stone);
-    margin-bottom: 0.5rem;
-  }
-
-  .hero-name span { color: var(--clay); }
-
-  .hero-title {
-    font-size: 1.1rem;
-    font-weight: 300;
-    color: var(--warm-gray);
-    margin-bottom: 1.5rem;
-    letter-spacing: 0.01em;
-  }
-
-  .hero-desc {
-    font-size: 1rem;
-    color: var(--stone);
-    opacity: 0.75;
-    margin-bottom: 2.5rem;
-    max-width: 460px;
-    line-height: 1.8;
-  }
-
-  .hero-cta {
-    display: flex; gap: 1rem; flex-wrap: wrap;
-  }
-
-  .btn-primary {
-    display: inline-block;
-    background: var(--clay);
-    color: #fff;
-    padding: 0.85rem 2rem;
-    font-size: 0.9rem;
-    font-weight: 500;
-    text-decoration: none;
-    border-radius: 4px;
-    letter-spacing: 0.03em;
-    transition: background 0.2s, transform 0.15s;
-  }
-  .btn-primary:hover { background: var(--dark-clay); transform: translateY(-1px); }
-
-  .btn-outline {
-    display: inline-block;
-    border: 1.5px solid var(--clay);
-    color: var(--clay);
-    padding: 0.85rem 2rem;
-    font-size: 0.9rem;
-    font-weight: 500;
-    text-decoration: none;
-    border-radius: 4px;
-    letter-spacing: 0.03em;
-    transition: background 0.2s, transform 0.15s;
-  }
-  .btn-outline:hover { background: var(--light-clay); transform: translateY(-1px); }
-
-  /* Photo area */
-  .hero-photo-wrap {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-  }
-
-  .photo-frame {
-    width: 340px; height: 400px;
-    border-radius: 12px 12px 80px 12px;
-    background: var(--light-clay);
-    border: 3px solid rgba(193,127,62,0.3);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 1rem;
-    position: relative;
-    overflow: hidden;
-    /* Change this src to your photo path */
-  }
-
-  .photo-frame img {
-    width: 100%; height: 100%;
-    object-fit: cover;
-    display: none; /* ← Will show when you add a real photo */
-  }
-
-  .photo-placeholder {
-    display: flex; flex-direction: column; align-items: center; gap: 0.75rem;
-  }
-
-  .photo-initials {
-    width: 100px; height: 100px;
-    border-radius: 50%;
-    background: var(--clay);
-    display: flex; align-items: center; justify-content: center;
-    font-family: 'Playfair Display', serif;
-    font-size: 2.2rem;
-    font-weight: 700;
-    color: #fff;
-  }
-
-  .photo-hint {
-    font-size: 0.8rem;
-    color: var(--warm-gray);
-    text-align: center;
-    max-width: 200px;
-    line-height: 1.5;
-  }
-
-  .photo-badge {
-    position: absolute; bottom: -1.2rem; left: -1.2rem;
-    background: var(--teal); color: #fff;
-    padding: 0.8rem 1.2rem;
-    border-radius: 8px;
-    font-size: 0.8rem;
-    font-weight: 500;
-    line-height: 1.4;
-    box-shadow: 0 4px 20px rgba(42,107,107,0.3);
-  }
-
-  .photo-badge strong { display: block; font-size: 1.1rem; }
-
-  /* STATS BAR */
-  .stats-bar {
-    background: var(--stone);
-    padding: 2rem 4rem;
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 1rem;
-    text-align: center;
-  }
-
-  .stat { border-right: 1px solid rgba(255,255,255,0.1); }
-  .stat:last-child { border-right: none; }
-  .stat-num {
-    font-family: 'Playfair Display', serif;
-    font-size: 2rem;
-    color: var(--clay);
-    font-weight: 700;
-  }
-  .stat-label {
-    font-size: 0.78rem;
-    color: rgba(255,255,255,0.5);
-    text-transform: uppercase;
-    letter-spacing: 0.08em;
-    margin-top: 0.2rem;
-  }
-
-  /* SECTION SHARED */
-  section { padding: var(--section-pad); }
-
-  .section-header {
-    text-align: center;
-    margin-bottom: 3.5rem;
-  }
-
-  .section-eyebrow {
-    font-size: 0.72rem;
-    font-weight: 500;
-    letter-spacing: 0.2em;
-    text-transform: uppercase;
-    color: var(--clay);
-    margin-bottom: 0.75rem;
-  }
-
-  .section-title {
-    font-family: 'Playfair Display', serif;
-    font-size: clamp(1.8rem, 3vw, 2.6rem);
-    font-weight: 700;
-    color: var(--stone);
-  }
-
-  .section-rule {
-    width: 48px; height: 3px;
-    background: var(--clay);
-    margin: 1rem auto 0;
-    border-radius: 2px;
-  }
+  /* SECTIONS */
+  section { padding:var(--section-pad); }
+  .section-header { text-align:center; margin-bottom:3.5rem; }
+  .section-eyebrow { font-size:0.72rem; font-weight:500; letter-spacing:0.2em; text-transform:uppercase; color:var(--clay); margin-bottom:0.75rem; }
+  .section-title { font-family:'Playfair Display',serif; font-size:clamp(1.8rem,3vw,2.6rem); font-weight:700; color:var(--stone); }
+  .section-rule { width:48px; height:3px; background:var(--clay); margin:1rem auto 0; border-radius:2px; }
 
   /* ABOUT */
-  #about { background: var(--off-white); }
-
-  .about-grid {
-    max-width: 1000px; margin: 0 auto;
-    display: grid; grid-template-columns: 1fr 1fr;
-    gap: 3rem; align-items: start;
-  }
-
-  .about-text p {
-    font-size: 1rem;
-    color: var(--warm-gray);
-    margin-bottom: 1.2rem;
-    line-height: 1.85;
-  }
-
-  .about-highlights { display: flex; flex-direction: column; gap: 1rem; }
-
-  .highlight-card {
-    background: #fff;
-    border: 1px solid rgba(193,127,62,0.2);
-    border-left: 3px solid var(--clay);
-    border-radius: 6px;
-    padding: 1rem 1.25rem;
-  }
-
-  .highlight-card h4 {
-    font-size: 0.85rem;
-    font-weight: 500;
-    color: var(--clay);
-    text-transform: uppercase;
-    letter-spacing: 0.06em;
-    margin-bottom: 0.3rem;
-  }
-
-  .highlight-card p { font-size: 0.9rem; color: var(--warm-gray); }
+  #about { background:var(--off-white); }
+  .about-grid { max-width:1000px; margin:0 auto; display:grid; grid-template-columns:1fr 1fr; gap:3rem; align-items:start; }
+  .about-text p { font-size:1rem; color:var(--warm-gray); margin-bottom:1.2rem; line-height:1.85; }
+  .about-highlights { display:flex; flex-direction:column; gap:1rem; }
+  .highlight-card { background:#fff; border:1px solid rgba(193,127,62,0.2); border-left:3px solid var(--clay); border-radius:6px; padding:1rem 1.25rem; }
+  .highlight-card h4 { font-size:0.85rem; font-weight:500; color:var(--clay); text-transform:uppercase; letter-spacing:0.06em; margin-bottom:0.3rem; }
+  .highlight-card p { font-size:0.9rem; color:var(--warm-gray); }
 
   /* EDUCATION */
-  #education { background: var(--light-clay); }
-
-  .edu-grid {
-    max-width: 900px; margin: 0 auto;
-    display: flex; flex-direction: column; gap: 1rem;
-  }
-
-  .edu-card {
-    background: #fff;
-    border-radius: 10px;
-    padding: 1.5rem 2rem;
-    display: grid;
-    grid-template-columns: auto 1fr auto;
-    align-items: center;
-    gap: 1.5rem;
-    border: 1px solid rgba(193,127,62,0.15);
-    transition: transform 0.2s, box-shadow 0.2s;
-  }
-  .edu-card:hover { transform: translateY(-2px); box-shadow: 0 8px 30px rgba(0,0,0,0.08); }
-
-  .edu-year {
-    font-size: 0.8rem;
-    color: var(--clay);
-    font-weight: 500;
-    letter-spacing: 0.05em;
-    white-space: nowrap;
-  }
-
-  .edu-degree {
-    font-weight: 500;
-    font-size: 1rem;
-    color: var(--stone);
-  }
-  .edu-institute {
-    font-size: 0.88rem;
-    color: var(--warm-gray);
-    margin-top: 0.2rem;
-  }
-
-  .edu-cpi {
-    font-family: 'Playfair Display', serif;
-    font-size: 1.4rem;
-    font-weight: 700;
-    color: var(--clay);
-  }
+  #education { background:var(--light-clay); }
+  .edu-grid { max-width:900px; margin:0 auto; display:flex; flex-direction:column; gap:1rem; }
+  .edu-card { background:#fff; border-radius:10px; padding:1.5rem 2rem; display:grid; grid-template-columns:auto 1fr auto; align-items:center; gap:1.5rem; border:1px solid rgba(193,127,62,0.15); transition:transform 0.2s,box-shadow 0.2s; }
+  .edu-card:hover { transform:translateY(-2px); box-shadow:0 8px 30px rgba(0,0,0,0.08); }
+  .edu-year { font-size:0.8rem; color:var(--clay); font-weight:500; white-space:nowrap; }
+  .edu-degree { font-weight:500; font-size:1rem; color:var(--stone); }
+  .edu-institute { font-size:0.88rem; color:var(--warm-gray); margin-top:0.2rem; }
+  .edu-cpi { font-family:'Playfair Display',serif; font-size:1.4rem; font-weight:700; color:var(--clay); }
 
   /* SKILLS */
-  #skills { background: var(--off-white); }
-
-  .skills-grid {
-    max-width: 1000px; margin: 0 auto;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 1.5rem;
-  }
-
-  .skill-category {
-    background: #fff;
-    border: 1px solid rgba(193,127,62,0.15);
-    border-radius: 10px;
-    padding: 1.5rem;
-  }
-
-  .skill-category h3 {
-    font-size: 0.78rem;
-    font-weight: 500;
-    color: var(--clay);
-    text-transform: uppercase;
-    letter-spacing: 0.1em;
-    margin-bottom: 1rem;
-    padding-bottom: 0.75rem;
-    border-bottom: 1px solid var(--light-clay);
-  }
-
-  .skill-tags {
-    display: flex; flex-wrap: wrap; gap: 0.5rem;
-  }
-
-  .tag {
-    background: var(--light-clay);
-    color: var(--dark-clay);
-    font-size: 0.78rem;
-    font-weight: 400;
-    padding: 0.3rem 0.75rem;
-    border-radius: 20px;
-  }
+  #skills { background:var(--off-white); }
+  .skills-grid { max-width:1000px; margin:0 auto; display:grid; grid-template-columns:repeat(3,1fr); gap:1.5rem; }
+  .skill-category { background:#fff; border:1px solid rgba(193,127,62,0.15); border-radius:10px; padding:1.5rem; }
+  .skill-category h3 { font-size:0.78rem; font-weight:500; color:var(--clay); text-transform:uppercase; letter-spacing:0.1em; margin-bottom:1rem; padding-bottom:0.75rem; border-bottom:1px solid var(--light-clay); }
+  .skill-tags { display:flex; flex-wrap:wrap; gap:0.5rem; }
+  .tag { background:var(--light-clay); color:var(--dark-clay); font-size:0.78rem; padding:0.3rem 0.75rem; border-radius:20px; }
 
   /* PROJECTS */
-  #projects { background: var(--stone); color: #fff; }
-  #projects .section-title { color: #fff; }
-  #projects .section-eyebrow { color: var(--clay); }
+  #projects { background:var(--stone); color:#fff; }
+  #projects .section-title { color:#fff; }
+  .projects-grid { max-width:1100px; margin:0 auto; display:grid; grid-template-columns:repeat(2,1fr); gap:1.5rem; }
+  .project-card { background:rgba(255,255,255,0.05); border:1px solid rgba(255,255,255,0.1); border-radius:12px; padding:1.75rem; transition:background 0.2s,transform 0.2s; position:relative; overflow:hidden; }
+  .project-card:hover { background:rgba(255,255,255,0.09); transform:translateY(-2px); }
+  .project-number { font-family:'Playfair Display',serif; font-size:3rem; font-weight:700; color:rgba(193,127,62,0.2); position:absolute; top:0.5rem; right:1rem; }
+  .project-type { font-size:0.72rem; font-weight:500; letter-spacing:0.12em; text-transform:uppercase; color:var(--clay); margin-bottom:0.75rem; }
+  .project-title { font-family:'Playfair Display',serif; font-size:1.2rem; font-weight:600; color:#fff; margin-bottom:0.75rem; line-height:1.35; }
+  .project-desc { font-size:0.9rem; color:rgba(255,255,255,0.6); line-height:1.7; margin-bottom:1rem; }
+  .project-tags { display:flex; flex-wrap:wrap; gap:0.4rem; }
+  .project-tag { background:rgba(193,127,62,0.15); color:var(--clay); font-size:0.73rem; padding:0.25rem 0.65rem; border-radius:3px; font-weight:500; }
+  .project-link { display:inline-block; margin-top:1rem; font-size:0.8rem; color:var(--clay); text-decoration:none; border:1px solid rgba(193,127,62,0.4); border-radius:4px; padding:0.3rem 0.8rem; transition:background 0.2s; }
+  .project-link:hover { background:rgba(193,127,62,0.15); }
 
-  .projects-grid {
-    max-width: 1100px; margin: 0 auto;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 1.5rem;
-  }
+  /* ═══ GALLERY ═══ */
+  #gallery { background:var(--off-white); }
+  .gallery-intro { max-width:680px; margin:0 auto 2.5rem; text-align:center; font-size:0.95rem; color:var(--warm-gray); line-height:1.8; }
+  .gallery-tabs { display:flex; justify-content:center; gap:0.75rem; margin-bottom:2.5rem; flex-wrap:wrap; }
+  .gallery-tab { padding:0.5rem 1.4rem; border:1.5px solid rgba(193,127,62,0.35); border-radius:30px; font-size:0.82rem; font-weight:500; color:var(--warm-gray); cursor:pointer; background:transparent; transition:all 0.2s; font-family:'DM Sans',sans-serif; }
+  .gallery-tab.active, .gallery-tab:hover { background:var(--clay); color:#fff; border-color:var(--clay); }
+  .gallery-grid { max-width:1100px; margin:0 auto; display:grid; grid-template-columns:repeat(3,1fr); gap:1rem; }
+  .gallery-slot { aspect-ratio:4/3; border-radius:10px; overflow:hidden; position:relative; background:var(--light-clay); cursor:pointer; border:1.5px dashed rgba(193,127,62,0.35); display:flex; flex-direction:column; align-items:center; justify-content:center; gap:0.5rem; transition:transform 0.2s,box-shadow 0.2s; }
+  .gallery-slot:hover { transform:scale(1.02); box-shadow:0 8px 30px rgba(0,0,0,0.1); }
+  .gallery-slot img { width:100%; height:100%; object-fit:cover; position:absolute; inset:0; }
+  .slot-label { font-size:0.75rem; color:var(--warm-gray); text-align:center; padding:0 1rem; line-height:1.5; }
+  .slot-icon { font-size:1.8rem; }
+  .slot-caption { position:absolute; bottom:0; left:0; right:0; background:linear-gradient(transparent,rgba(26,24,20,0.85)); color:#fff; font-size:0.78rem; padding:2rem 0.75rem 0.6rem; opacity:0; transition:opacity 0.2s; }
+  .gallery-slot:hover .slot-caption { opacity:1; }
+  .howto-box { max-width:800px; margin:2.5rem auto 0; background:#fff; border:1px solid rgba(193,127,62,0.2); border-left:3px solid var(--clay); border-radius:8px; padding:1.5rem 2rem; }
+  .howto-box h4 { font-size:0.85rem; font-weight:500; color:var(--clay); text-transform:uppercase; letter-spacing:0.08em; margin-bottom:0.75rem; }
+  .howto-box ol { padding-left:1.2rem; }
+  .howto-box li { font-size:0.88rem; color:var(--warm-gray); margin-bottom:0.5rem; line-height:1.65; }
+  .howto-box code { background:var(--light-clay); color:var(--dark-clay); padding:0.1rem 0.4rem; border-radius:3px; font-size:0.82rem; }
 
-  .project-card {
-    background: rgba(255,255,255,0.05);
-    border: 1px solid rgba(255,255,255,0.1);
-    border-radius: 12px;
-    padding: 1.75rem;
-    transition: background 0.2s, transform 0.2s;
-    position: relative;
-    overflow: hidden;
-  }
-  .project-card:hover { background: rgba(255,255,255,0.09); transform: translateY(-2px); }
+  /* ═══ VIDEOS ═══ */
+  #videos { background:var(--stone); }
+  #videos .section-title { color:#fff; }
+  #videos .section-eyebrow { color:var(--clay); }
+  .videos-intro { max-width:680px; margin:0 auto 2.5rem; text-align:center; font-size:0.95rem; color:rgba(255,255,255,0.55); line-height:1.8; }
+  .videos-grid { max-width:1100px; margin:0 auto; display:grid; grid-template-columns:repeat(2,1fr); gap:1.5rem; }
+  .video-card { background:rgba(255,255,255,0.05); border:1px solid rgba(255,255,255,0.1); border-radius:12px; overflow:hidden; transition:transform 0.2s; }
+  .video-card:hover { transform:translateY(-3px); }
+  .video-embed { position:relative; padding-bottom:56.25%; height:0; overflow:hidden; background:#000; }
+  .video-embed iframe { position:absolute; inset:0; width:100%; height:100%; border:none; }
+  .video-placeholder { aspect-ratio:16/9; background:rgba(0,0,0,0.4); display:flex; flex-direction:column; align-items:center; justify-content:center; gap:0.75rem; }
+  .play-icon { width:56px; height:56px; border-radius:50%; background:rgba(193,127,62,0.8); display:flex; align-items:center; justify-content:center; }
+  .play-icon::after { content:''; border-left:20px solid #fff; border-top:12px solid transparent; border-bottom:12px solid transparent; margin-left:5px; }
+  .video-placeholder-text { font-size:0.82rem; color:rgba(255,255,255,0.4); text-align:center; max-width:200px; line-height:1.5; }
+  .video-info { padding:1.2rem 1.5rem; }
+  .video-category { font-size:0.72rem; font-weight:500; letter-spacing:0.12em; text-transform:uppercase; color:var(--clay); margin-bottom:0.4rem; }
+  .video-title { font-weight:500; font-size:1rem; color:#fff; margin-bottom:0.4rem; line-height:1.4; }
+  .video-desc { font-size:0.85rem; color:rgba(255,255,255,0.5); line-height:1.6; }
 
-  .project-number {
-    font-family: 'Playfair Display', serif;
-    font-size: 3rem;
-    font-weight: 700;
-    color: rgba(193,127,62,0.2);
-    position: absolute;
-    top: 0.5rem; right: 1rem;
-  }
-
-  .project-type {
-    font-size: 0.72rem;
-    font-weight: 500;
-    letter-spacing: 0.12em;
-    text-transform: uppercase;
-    color: var(--clay);
-    margin-bottom: 0.75rem;
-  }
-
-  .project-title {
-    font-family: 'Playfair Display', serif;
-    font-size: 1.2rem;
-    font-weight: 600;
-    color: #fff;
-    margin-bottom: 0.75rem;
-    line-height: 1.35;
-  }
-
-  .project-desc {
-    font-size: 0.9rem;
-    color: rgba(255,255,255,0.6);
-    line-height: 1.7;
-    margin-bottom: 1rem;
-  }
-
-  .project-tags { display: flex; flex-wrap: wrap; gap: 0.4rem; }
-  .project-tag {
-    background: rgba(193,127,62,0.15);
-    color: var(--clay);
-    font-size: 0.73rem;
-    padding: 0.25rem 0.65rem;
-    border-radius: 3px;
-    font-weight: 500;
-  }
+  .yt-howto { max-width:800px; margin:2.5rem auto 0; background:rgba(255,255,255,0.05); border:1px solid rgba(193,127,62,0.3); border-left:3px solid var(--clay); border-radius:8px; padding:1.5rem 2rem; }
+  .yt-howto h4 { font-size:0.85rem; font-weight:500; color:var(--clay); text-transform:uppercase; letter-spacing:0.08em; margin-bottom:1rem; }
+  .yt-steps { display:flex; flex-direction:column; gap:0.75rem; }
+  .yt-step { display:flex; gap:1rem; align-items:flex-start; }
+  .step-num { min-width:26px; height:26px; border-radius:50%; background:var(--clay); color:#fff; font-size:0.72rem; font-weight:700; display:flex; align-items:center; justify-content:center; margin-top:0.1rem; flex-shrink:0; }
+  .step-text { font-size:0.88rem; color:rgba(255,255,255,0.6); line-height:1.65; }
+  .step-text code { background:rgba(193,127,62,0.2); color:var(--clay); padding:0.1rem 0.4rem; border-radius:3px; font-size:0.82rem; }
+  .step-text strong { color:rgba(255,255,255,0.85); font-weight:500; }
 
   /* EXPERIENCE */
-  #experience { background: var(--off-white); }
-
-  .exp-container { max-width: 800px; margin: 0 auto; }
-
-  .exp-card {
-    background: #fff;
-    border: 1px solid rgba(193,127,62,0.15);
-    border-radius: 12px;
-    padding: 2rem;
-    position: relative;
-  }
-
-  .exp-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    margin-bottom: 1.2rem;
-    flex-wrap: wrap; gap: 0.5rem;
-  }
-
-  .exp-role {
-    font-weight: 500;
-    font-size: 1.1rem;
-    color: var(--stone);
-  }
-
-  .exp-company {
-    font-size: 0.88rem;
-    color: var(--warm-gray);
-    margin-top: 0.15rem;
-  }
-
-  .exp-duration {
-    background: var(--light-clay);
-    color: var(--dark-clay);
-    font-size: 0.78rem;
-    padding: 0.3rem 0.8rem;
-    border-radius: 20px;
-    white-space: nowrap;
-  }
-
-  .exp-points { list-style: none; padding: 0; }
-  .exp-points li {
-    font-size: 0.92rem;
-    color: var(--warm-gray);
-    padding: 0.5rem 0;
-    border-bottom: 1px solid var(--light-clay);
-    line-height: 1.65;
-    padding-left: 1.2rem;
-    position: relative;
-  }
-  .exp-points li::before {
-    content: '—';
-    position: absolute; left: 0;
-    color: var(--clay);
-    font-weight: 300;
-  }
-  .exp-points li:last-child { border-bottom: none; }
+  #experience { background:var(--off-white); }
+  .exp-container { max-width:800px; margin:0 auto; }
+  .exp-card { background:#fff; border:1px solid rgba(193,127,62,0.15); border-radius:12px; padding:2rem; }
+  .exp-header { display:flex; justify-content:space-between; align-items:flex-start; margin-bottom:1.2rem; flex-wrap:wrap; gap:0.5rem; }
+  .exp-role { font-weight:500; font-size:1.1rem; color:var(--stone); }
+  .exp-company { font-size:0.88rem; color:var(--warm-gray); margin-top:0.15rem; }
+  .exp-duration { background:var(--light-clay); color:var(--dark-clay); font-size:0.78rem; padding:0.3rem 0.8rem; border-radius:20px; white-space:nowrap; }
+  .exp-points { list-style:none; padding:0; }
+  .exp-points li { font-size:0.92rem; color:var(--warm-gray); padding:0.5rem 0 0.5rem 1.2rem; border-bottom:1px solid var(--light-clay); line-height:1.65; position:relative; }
+  .exp-points li::before { content:'—'; position:absolute; left:0; color:var(--clay); }
+  .exp-points li:last-child { border-bottom:none; }
 
   /* CONTACT */
-  #contact { background: var(--light-clay); text-align: center; }
+  #contact { background:var(--light-clay); text-align:center; }
+  .contact-inner { max-width:600px; margin:0 auto; }
+  .contact-intro { font-size:1.05rem; color:var(--warm-gray); margin-bottom:2.5rem; line-height:1.8; }
+  .contact-links { display:flex; justify-content:center; gap:1.5rem; flex-wrap:wrap; }
+  .contact-link { display:flex; align-items:center; gap:0.5rem; text-decoration:none; color:var(--stone); font-size:0.95rem; font-weight:500; padding:0.75rem 1.5rem; background:#fff; border-radius:6px; border:1px solid rgba(193,127,62,0.2); transition:transform 0.2s,border-color 0.2s,color 0.2s; }
+  .contact-link:hover { transform:translateY(-2px); border-color:var(--clay); color:var(--clay); }
 
-  .contact-inner { max-width: 600px; margin: 0 auto; }
+  footer { background:var(--stone); text-align:center; padding:2rem; color:rgba(255,255,255,0.25); font-size:0.8rem; letter-spacing:0.05em; }
 
-  .contact-intro {
-    font-size: 1.05rem;
-    color: var(--warm-gray);
-    margin-bottom: 2.5rem;
-    line-height: 1.8;
-  }
+  .fade-in { opacity:0; transform:translateY(24px); transition:opacity 0.6s ease,transform 0.6s ease; }
+  .fade-in.visible { opacity:1; transform:none; }
 
-  .contact-links {
-    display: flex;
-    justify-content: center;
-    gap: 1.5rem;
-    flex-wrap: wrap;
-    margin-bottom: 2rem;
-  }
-
-  .contact-link {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-    text-decoration: none;
-    color: var(--stone);
-    font-size: 0.95rem;
-    font-weight: 500;
-    padding: 0.75rem 1.5rem;
-    background: #fff;
-    border-radius: 6px;
-    border: 1px solid rgba(193,127,62,0.2);
-    transition: transform 0.2s, border-color 0.2s;
-  }
-  .contact-link:hover { transform: translateY(-2px); border-color: var(--clay); color: var(--clay); }
-
-  /* FOOTER */
-  footer {
-    background: var(--stone);
-    text-align: center;
-    padding: 2rem;
-    color: rgba(255,255,255,0.35);
-    font-size: 0.8rem;
-    letter-spacing: 0.05em;
-  }
-
-  /* SCROLL ANIMATIONS */
-  .fade-in {
-    opacity: 0;
-    transform: translateY(24px);
-    transition: opacity 0.6s ease, transform 0.6s ease;
-  }
-  .fade-in.visible { opacity: 1; transform: none; }
-
-  /* MOBILE */
-  @media (max-width: 768px) {
-    nav { padding: 1rem 1.5rem; }
-    .nav-links { gap: 1rem; }
-    .nav-links a { font-size: 0.75rem; }
-    #hero { grid-template-columns: 1fr; padding: 5rem 1.5rem 3rem; text-align: center; gap: 2rem; }
-    .hero-photo-wrap { order: -1; }
-    .photo-frame { width: 220px; height: 260px; }
-    .photo-badge { display: none; }
-    .hero-cta { justify-content: center; }
-    .stats-bar { grid-template-columns: repeat(2,1fr); padding: 2rem; }
-    .stat { border-right: none; border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 1rem; }
-    .about-grid, .skills-grid, .projects-grid { grid-template-columns: 1fr; }
-    .edu-card { grid-template-columns: 1fr; text-align: center; }
-    section { padding: 3rem 1.5rem; }
+  @media (max-width:768px) {
+    nav { padding:1rem 1.5rem; }
+    .nav-links { gap:0.7rem; }
+    .nav-links a { font-size:0.7rem; }
+    #hero { grid-template-columns:1fr; padding:5rem 1.5rem 3rem; text-align:center; gap:2rem; }
+    .hero-photo-wrap { order:-1; }
+    .photo-frame { width:220px; height:260px; }
+    .photo-badge { display:none; }
+    .hero-cta { justify-content:center; }
+    .stats-bar { grid-template-columns:repeat(2,1fr); padding:2rem; }
+    .stat { border-right:none; border-bottom:1px solid rgba(255,255,255,0.1); padding-bottom:1rem; }
+    .about-grid,.skills-grid,.projects-grid,.gallery-grid,.videos-grid { grid-template-columns:1fr; }
+    .edu-card { grid-template-columns:1fr; text-align:center; }
+    section { padding:3rem 1.5rem; }
   }
 </style>
 </head>
 <body>
 
-<!-- NAV -->
 <nav>
   <a href="#hero" class="nav-logo">NK</a>
   <ul class="nav-links">
     <li><a href="#about">About</a></li>
     <li><a href="#education">Education</a></li>
     <li><a href="#projects">Projects</a></li>
-    <li><a href="#skills">Skills</a></li>
+    <li><a href="#gallery">Gallery</a></li>
+    <li><a href="#videos">Videos</a></li>
     <li><a href="#contact">Contact</a></li>
   </ul>
 </nav>
@@ -624,53 +215,38 @@
     <span class="hero-badge">IIT Kanpur · M.Tech 2026</span>
     <h1 class="hero-name">Nehal<br><span>Khan</span></h1>
     <p class="hero-title">Geological Technology &amp; Data Science</p>
-    <p class="hero-desc">
-      Final Year Postgraduate at IIT Kanpur, merging the precision of Earth Science
-      with the power of machine learning — from meteoroid orbital prediction to
-      fraud detection engines.
-    </p>
+    <p class="hero-desc">Final Year Postgraduate at IIT Kanpur, merging the precision of Earth Science with the power of machine learning — from meteoroid orbital prediction to fraud detection engines.</p>
     <div class="hero-cta">
       <a href="#projects" class="btn-primary">View Projects</a>
-      <a href="mailto:nehalkhan24@iitk.ac.in" class="btn-outline">Get in Touch</a>
+      <a href="#contact" class="btn-outline">Get in Touch</a>
     </div>
   </div>
-
   <div class="hero-photo-wrap fade-in">
-    <div class="photo-frame" id="photoFrame">
-      <!-- 
-        TO ADD YOUR PHOTO:
-        1. Save your photo as "photo.jpg" in the same folder as this file
-        2. Remove the comment tags around the <img> line below
-        3. Delete the photo-placeholder div
+    <div class="photo-frame">
+      <!--
+      ══════════════════════════════════════
+      HOW TO ADD YOUR PHOTO:
+      1. Save your photo as "photo.jpg"
+      2. Put it in the same folder as index.html
+      3. Delete the photo-placeholder div below
+      4. Remove the comment markers around the img tag
+      ══════════════════════════════════════
       -->
       <img src="photo.jpg" alt="Nehal Khan">
-    
-      
+              
+        
+   </div>
     </div>
-    <div class="photo-badge">
-      <strong>8.36</strong>CPI · IIT Kanpur
-    </div>
+    <div class="photo-badge"><strong>8.36</strong>CPI · IIT Kanpur</div>
   </div>
 </section>
 
-<!-- STATS BAR -->
+<!-- STATS -->
 <div class="stats-bar">
-  <div class="stat fade-in">
-    <div class="stat-num">4+</div>
-    <div class="stat-label">Key Projects</div>
-  </div>
-  <div class="stat fade-in">
-    <div class="stat-num">8.36</div>
-    <div class="stat-label">CPI at IIT Kanpur</div>
-  </div>
-  <div class="stat fade-in">
-    <div class="stat-num">10+</div>
-    <div class="stat-label">Technical Skills</div>
-  </div>
-  <div class="stat fade-in">
-    <div class="stat-num">3</div>
-    <div class="stat-label">Field Excursions</div>
-  </div>
+  <div class="stat fade-in"><div class="stat-num">4+</div><div class="stat-label">Key Projects</div></div>
+  <div class="stat fade-in"><div class="stat-num">8.36</div><div class="stat-label">CPI at IIT Kanpur</div></div>
+  <div class="stat fade-in"><div class="stat-num">10+</div><div class="stat-label">Technical Skills</div></div>
+  <div class="stat fade-in"><div class="stat-num">3</div><div class="stat-label">Field Excursions</div></div>
 </div>
 
 <!-- ABOUT -->
@@ -682,38 +258,15 @@
   </div>
   <div class="about-grid">
     <div class="about-text fade-in">
-      <p>
-        I'm Nehal Khan, a final year M.Tech student in Geological Technology at IIT Kanpur
-        with a deep interest in the intersection of Earth Science and Data Science.
-      </p>
-      <p>
-        My work spans predictive modeling, deep learning for structural health monitoring,
-        and computational models for meteoroid orbital paths — blending geology with
-        cutting-edge machine learning to solve real-world problems.
-      </p>
-      <p>
-        Beyond research, I've built data science products in internships, led logistics
-        for the EAGE Student Chapter, and even launched a local tutoring startup.
-        I bring both technical depth and entrepreneurial thinking.
-      </p>
+      <p>I'm Nehal Khan, a final year M.Tech student in Geological Technology at IIT Kanpur with a deep interest in the intersection of Earth Science and Data Science.</p>
+      <p>My work spans predictive modeling, deep learning for structural health monitoring, and computational models for meteoroid orbital paths — blending geology with cutting-edge machine learning to solve real-world problems.</p>
+      <p>Beyond research, I've built data science products in internships, led logistics for the EAGE Student Chapter, and launched a local tutoring startup. I bring both technical depth and entrepreneurial thinking.</p>
     </div>
     <div class="about-highlights fade-in">
-      <div class="highlight-card">
-        <h4>Academic Award</h4>
-        <p>Academic Excellence Award, IIT Kanpur — January 2025</p>
-      </div>
-      <div class="highlight-card">
-        <h4>Sports Achievement</h4>
-        <p>Gold (Volleyball) &amp; Silver (Chess) — ESS Sports Meet 2025, IIT Kanpur</p>
-      </div>
-      <div class="highlight-card">
-        <h4>Leadership</h4>
-        <p>Logistics Head, EAGE Student Chapter IIT Kanpur — Dec 2024 to Present</p>
-      </div>
-      <div class="highlight-card">
-        <h4>Entrepreneur</h4>
-        <p>Founded a tutoring startup connecting students with qualified tutors — Aug 2023</p>
-      </div>
+      <div class="highlight-card"><h4>Academic Award</h4><p>Academic Excellence Award, IIT Kanpur — January 2025</p></div>
+      <div class="highlight-card"><h4>Sports Achievement</h4><p>Gold (Volleyball) &amp; Silver (Chess) — ESS Sports Meet 2025, IIT Kanpur</p></div>
+      <div class="highlight-card"><h4>Leadership</h4><p>Logistics Head, EAGE Student Chapter IIT Kanpur — Dec 2024 to Present</p></div>
+      <div class="highlight-card"><h4>Entrepreneur</h4><p>Founded a tutoring startup connecting students with qualified tutors — Aug 2023</p></div>
     </div>
   </div>
 </section>
@@ -728,26 +281,17 @@
   <div class="edu-grid">
     <div class="edu-card fade-in">
       <div class="edu-year">2024–Present</div>
-      <div>
-        <div class="edu-degree">M.Tech – Geological Technology</div>
-        <div class="edu-institute">Indian Institute of Technology, Kanpur</div>
-      </div>
+      <div><div class="edu-degree">M.Tech – Geological Technology</div><div class="edu-institute">Indian Institute of Technology, Kanpur</div></div>
       <div class="edu-cpi">8.36</div>
     </div>
     <div class="edu-card fade-in">
       <div class="edu-year">2021–2023</div>
-      <div>
-        <div class="edu-degree">M.Sc – Applied Geology</div>
-        <div class="edu-institute">Aligarh Muslim University, Aligarh</div>
-      </div>
+      <div><div class="edu-degree">M.Sc – Applied Geology</div><div class="edu-institute">Aligarh Muslim University, Aligarh</div></div>
       <div class="edu-cpi">7.4</div>
     </div>
     <div class="edu-card fade-in">
       <div class="edu-year">2017–2020</div>
-      <div>
-        <div class="edu-degree">B.Sc (Hons) – Geology</div>
-        <div class="edu-institute">Aligarh Muslim University, Aligarh</div>
-      </div>
+      <div><div class="edu-degree">B.Sc (Hons) – Geology</div><div class="edu-institute">Aligarh Muslim University, Aligarh</div></div>
       <div class="edu-cpi">7.04</div>
     </div>
   </div>
@@ -761,65 +305,12 @@
     <div class="section-rule"></div>
   </div>
   <div class="skills-grid">
-    <div class="skill-category fade-in">
-      <h3>Programming</h3>
-      <div class="skill-tags">
-        <span class="tag">Python</span>
-        <span class="tag">MATLAB</span>
-        <span class="tag">SQL</span>
-      </div>
-    </div>
-    <div class="skill-category fade-in">
-      <h3>Machine Learning</h3>
-      <div class="skill-tags">
-        <span class="tag">Scikit-Learn</span>
-        <span class="tag">XGBoost</span>
-        <span class="tag">Random Forest</span>
-        <span class="tag">SMOTE</span>
-        <span class="tag">ARIMA</span>
-        <span class="tag">LSTM</span>
-      </div>
-    </div>
-    <div class="skill-category fade-in">
-      <h3>Deep Learning</h3>
-      <div class="skill-tags">
-        <span class="tag">TensorFlow</span>
-        <span class="tag">Keras</span>
-        <span class="tag">CNN</span>
-        <span class="tag">U-Net</span>
-      </div>
-    </div>
-    <div class="skill-category fade-in">
-      <h3>Data & Visualization</h3>
-      <div class="skill-tags">
-        <span class="tag">NumPy</span>
-        <span class="tag">Pandas</span>
-        <span class="tag">Matplotlib</span>
-        <span class="tag">Seaborn</span>
-        <span class="tag">Power BI</span>
-        <span class="tag">Tableau</span>
-      </div>
-    </div>
-    <div class="skill-category fade-in">
-      <h3>Geo Tools</h3>
-      <div class="skill-tags">
-        <span class="tag">QGIS</span>
-        <span class="tag">GMT</span>
-        <span class="tag">Inkscape</span>
-        <span class="tag">Gravimeter</span>
-        <span class="tag">Magnetometer</span>
-      </div>
-    </div>
-    <div class="skill-category fade-in">
-      <h3>Core Skills</h3>
-      <div class="skill-tags">
-        <span class="tag">Data Analytics</span>
-        <span class="tag">Image Processing</span>
-        <span class="tag">Computer Vision</span>
-        <span class="tag">Statistics</span>
-        <span class="tag">MS Excel</span>
-      </div>
-    </div>
+    <div class="skill-category fade-in"><h3>Programming</h3><div class="skill-tags"><span class="tag">Python</span><span class="tag">MATLAB</span><span class="tag">SQL</span></div></div>
+    <div class="skill-category fade-in"><h3>Machine Learning</h3><div class="skill-tags"><span class="tag">Scikit-Learn</span><span class="tag">XGBoost</span><span class="tag">Random Forest</span><span class="tag">SMOTE</span><span class="tag">ARIMA</span><span class="tag">LSTM</span></div></div>
+    <div class="skill-category fade-in"><h3>Deep Learning</h3><div class="skill-tags"><span class="tag">TensorFlow</span><span class="tag">Keras</span><span class="tag">CNN</span><span class="tag">U-Net</span></div></div>
+    <div class="skill-category fade-in"><h3>Data &amp; Visualization</h3><div class="skill-tags"><span class="tag">NumPy</span><span class="tag">Pandas</span><span class="tag">Matplotlib</span><span class="tag">Seaborn</span><span class="tag">Power BI</span><span class="tag">Tableau</span></div></div>
+    <div class="skill-category fade-in"><h3>Geo Tools</h3><div class="skill-tags"><span class="tag">QGIS</span><span class="tag">GMT</span><span class="tag">Inkscape</span><span class="tag">Gravimeter</span><span class="tag">Magnetometer</span></div></div>
+    <div class="skill-category fade-in"><h3>Core Skills</h3><div class="skill-tags"><span class="tag">Data Analytics</span><span class="tag">Image Processing</span><span class="tag">Computer Vision</span><span class="tag">Statistics</span><span class="tag">MS Excel</span></div></div>
   </div>
 </section>
 
@@ -831,73 +322,257 @@
     <div class="section-rule"></div>
   </div>
   <div class="projects-grid">
-
     <div class="project-card fade-in">
       <div class="project-number">01</div>
       <div class="project-type">M.Tech Thesis · Ongoing</div>
       <h3 class="project-title">Meteoroid Orbital Path Prediction via Thermoluminescence</h3>
-      <p class="project-desc">
-        Developing a MATLAB computational model simulating thousands of potential meteorite
-        orbits from thermoluminescence trap data, applying orbital mechanics and numerical
-        integration for best-fit trajectory determination.
-      </p>
-      <div class="project-tags">
-        <span class="project-tag">MATLAB</span>
-        <span class="project-tag">Orbital Mechanics</span>
-        <span class="project-tag">Thermoluminescence</span>
-      </div>
+      <p class="project-desc">MATLAB computational model simulating thousands of meteorite orbits from thermoluminescence data, using orbital mechanics and numerical integration for best-fit trajectory determination.</p>
+      <div class="project-tags"><span class="project-tag">MATLAB</span><span class="project-tag">Orbital Mechanics</span><span class="project-tag">Thermoluminescence</span></div>
+      <!-- Replace # with your actual GitHub link, e.g. https://github.com/nehalkhan/meteoroid -->
+      <a href="#" class="project-link">View on GitHub →</a>
     </div>
-
     <div class="project-card fade-in">
       <div class="project-number">02</div>
       <div class="project-type">Descon Society · IIT Kanpur</div>
       <h3 class="project-title">Real-Time Civil Structure Defect Detection</h3>
-      <p class="project-desc">
-        Designed a U-Net CNN system for detecting cracks and moisture in civil structures.
-        Developed MATLAB pipelines for image preprocessing and augmentation;
-        trained on annotated datasets achieving high detection accuracy.
-      </p>
-      <div class="project-tags">
-        <span class="project-tag">CNN</span>
-        <span class="project-tag">U-Net</span>
-        <span class="project-tag">MATLAB</span>
-        <span class="project-tag">Computer Vision</span>
-      </div>
+      <p class="project-desc">U-Net CNN system for detecting cracks and moisture in civil structures. Built MATLAB pipelines for preprocessing, augmentation, and model evaluation on annotated datasets.</p>
+      <div class="project-tags"><span class="project-tag">CNN</span><span class="project-tag">U-Net</span><span class="project-tag">MATLAB</span><span class="project-tag">Computer Vision</span></div>
+      <a href="#" class="project-link">View on GitHub →</a>
     </div>
-
     <div class="project-card fade-in">
       <div class="project-number">03</div>
       <div class="project-type">Self Project</div>
       <h3 class="project-title">Time Series Quantity Analysis &amp; Forecasting</h3>
-      <p class="project-desc">
-        Applied ARIMA, SARIMA, and LSTM models for time series forecasting.
-        Performed feature engineering, preprocessing, and visualization to support
-        quantity-based predictive insights and decision-making.
-      </p>
-      <div class="project-tags">
-        <span class="project-tag">ARIMA</span>
-        <span class="project-tag">LSTM</span>
-        <span class="project-tag">Python</span>
-        <span class="project-tag">Forecasting</span>
-      </div>
+      <p class="project-desc">Applied ARIMA, SARIMA, and LSTM models for time series forecasting with feature engineering, preprocessing, and visualization for quantity-based predictive insights.</p>
+      <div class="project-tags"><span class="project-tag">ARIMA</span><span class="project-tag">LSTM</span><span class="project-tag">Python</span><span class="project-tag">Forecasting</span></div>
+      <a href="#" class="project-link">View on GitHub →</a>
     </div>
-
     <div class="project-card fade-in">
       <div class="project-number">04</div>
       <div class="project-type">Self Project</div>
       <h3 class="project-title">Hotel Reservation Analysis with SQL</h3>
-      <p class="project-desc">
-        Analyzed a comprehensive hotel reservation dataset using SQL to extract insights on
-        guest behavior and booking patterns. Developed data-driven recommendations to
-        improve operational efficiency and strategic decision-making.
-      </p>
-      <div class="project-tags">
-        <span class="project-tag">SQL</span>
-        <span class="project-tag">Data Analysis</span>
-        <span class="project-tag">Business Intelligence</span>
+      <p class="project-desc">Analyzed hotel reservation data using SQL to extract guest behavior insights and booking trends. Developed data-driven recommendations to improve operational efficiency.</p>
+      <div class="project-tags"><span class="project-tag">SQL</span><span class="project-tag">Data Analysis</span><span class="project-tag">Business Intelligence</span></div>
+      <a href="#" class="project-link">View on GitHub →</a>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ PHOTO GALLERY ══════════ -->
+<section id="gallery">
+  <div class="section-header fade-in">
+    <p class="section-eyebrow">Field Work &amp; Campus Life</p>
+    <h2 class="section-title">Photo Gallery</h2>
+    <div class="section-rule"></div>
+  </div>
+  <p class="gallery-intro fade-in">From the Kumaon Himalayas to Rajasthan's ancient terrains — snapshots from geological fieldwork, lab sessions, and life at IIT Kanpur.</p>
+
+  <div class="gallery-tabs fade-in">
+    <button class="gallery-tab active" onclick="filterGallery('all',this)">All Photos</button>
+    <button class="gallery-tab" onclick="filterGallery('field',this)">Field Work</button>
+    <button class="gallery-tab" onclick="filterGallery('lab',this)">Lab &amp; Research</button>
+    <button class="gallery-tab" onclick="filterGallery('campus',this)">Campus Life</button>
+  </div>
+
+  <div class="gallery-grid" id="galleryGrid">
+
+    <!--
+    ════════════════════════════════════════
+    HOW TO ADD YOUR PHOTOS — READ THIS!
+
+    Step 1: Create a folder named "gallery" next to your index.html file
+    Step 2: Copy your photos there (use names like himalaya1.jpg, lab1.jpg)
+    Step 3: For each slot below, change:
+              src=""   →   src="gallery/YOUR-FILENAME.jpg"
+            and update the caption text
+    Step 4: Upload the "gallery" folder + index.html to GitHub
+    ════════════════════════════════════════
+    -->
+
+    <div class="gallery-slot" data-cat="field">
+      <img src="" alt="Kumaon Himalaya">
+      <div class="slot-icon">🏔</div>
+      <div class="slot-label">Your photo from<br>Kumaon Himalaya trip</div>
+      <div class="slot-caption">Kumaon Himalaya – Nainital, Bhimtal, May 2022</div>
+    </div>
+
+    <div class="gallery-slot" data-cat="field">
+      <img src="" alt="Rajasthan field">
+      <div class="slot-icon">🪨</div>
+      <div class="slot-label">Your photo from<br>Bayana, Rajasthan trip</div>
+      <div class="slot-caption">Bayana Region, Rajasthan – Jan 2023</div>
+    </div>
+
+    <div class="gallery-slot" data-cat="field">
+      <img src="" alt="Chittorgarh">
+      <div class="slot-icon">🗺</div>
+      <div class="slot-label">Your photo from<br>Chittorgarh trip</div>
+      <div class="slot-caption">Chittorgarh, Rajasthan – Jan 2019</div>
+    </div>
+
+    <div class="gallery-slot" data-cat="field">
+      <img src="" alt="Field work">
+      <div class="slot-icon">📍</div>
+      <div class="slot-label">Add any other<br>field work photo</div>
+      <div class="slot-caption">Field Geology</div>
+    </div>
+
+    <div class="gallery-slot" data-cat="lab">
+      <img src="" alt="Lab microscope">
+      <div class="slot-icon">🔬</div>
+      <div class="slot-label">Photo at the<br>petrological microscope</div>
+      <div class="slot-caption">Petrological Microscope Lab – IIT Kanpur</div>
+    </div>
+
+    <div class="gallery-slot" data-cat="lab">
+      <img src="" alt="Research coding">
+      <div class="slot-icon">💻</div>
+      <div class="slot-label">Photo of your<br>research / coding setup</div>
+      <div class="slot-caption">Research &amp; Data Science Work</div>
+    </div>
+
+    <div class="gallery-slot" data-cat="campus">
+      <img src="" alt="Gold medal volleyball">
+      <div class="slot-icon">🏆</div>
+      <div class="slot-label">Gold medal photo<br>Volleyball – ESS 2025</div>
+      <div class="slot-caption">Gold Medal – Volleyball, ESS Sports Meet 2025</div>
+    </div>
+
+    <div class="gallery-slot" data-cat="campus">
+      <img src="" alt="Chess silver medal">
+      <div class="slot-icon">♟</div>
+      <div class="slot-label">Silver medal photo<br>Chess – ESS 2025</div>
+      <div class="slot-caption">Silver Medal – Chess, ESS Sports Meet 2025</div>
+    </div>
+
+    <div class="gallery-slot" data-cat="campus">
+      <img src="" alt="IIT Kanpur campus">
+      <div class="slot-icon">🎓</div>
+      <div class="slot-label">Any campus or<br>daily life photo</div>
+      <div class="slot-caption">Life at IIT Kanpur</div>
+    </div>
+
+  </div>
+
+  <div class="howto-box fade-in">
+    <h4>📂 How to add your photos to the gallery</h4>
+    <ol>
+      <li>On your computer, open the folder where <code>index.html</code> is saved</li>
+      <li>Create a new folder inside it called exactly <code>gallery</code></li>
+      <li>Copy your photos into that <code>gallery/</code> folder with simple names: <code>himalaya1.jpg</code>, <code>lab-microscope.jpg</code>, etc.</li>
+      <li>Open <code>index.html</code> in Notepad or VS Code → find the slot you want → change <code>src=""</code> to <code>src="gallery/himalaya1.jpg"</code> (your filename)</li>
+      <li>On GitHub: click <strong>Add file → Upload files</strong> → drag both <code>index.html</code> AND the <code>gallery/</code> folder → click Commit → your site updates!</li>
+    </ol>
+  </div>
+</section>
+
+<!-- ══════════ VIDEOS ══════════ -->
+<section id="videos">
+  <div class="section-header fade-in">
+    <p class="section-eyebrow">Watch My Work</p>
+    <h2 class="section-title">Videos</h2>
+    <div class="section-rule"></div>
+  </div>
+  <p class="videos-intro fade-in">Project walkthroughs, field footage, and daily life — upload to YouTube first, then paste the link below to embed here on your website.</p>
+
+  <div class="videos-grid">
+
+    <!--
+    ════════════════════════════════════════
+    HOW TO ADD YOUR VIDEOS:
+
+    1. Upload video to YouTube (youtube.com → your profile icon → YouTube Studio → Upload)
+    2. Go to your uploaded video → click SHARE → click EMBED
+    3. Copy the URL from inside src="..." — it looks like:
+       https://www.youtube.com/embed/abc123XYZ
+    4. Come back here and find the video card you want
+    5. DELETE the video-placeholder div
+    6. UNCOMMENT the video-embed div (remove the  and  around it)
+    7. Paste your YouTube URL inside src="..."
+    8. Update the title and description text
+    9. Commit to GitHub — your video appears live!
+    ════════════════════════════════════════
+    -->
+
+    <div class="video-card fade-in">
+      <!--
+      <div class="video-embed">
+        <iframe src="PASTE_YOUR_YOUTUBE_EMBED_URL_HERE" allowfullscreen title="Meteoroid Orbit Prediction"></iframe>
+      </div>
+      -->
+      <div class="video-placeholder">
+        <div class="play-icon"></div>
+        <p class="video-placeholder-text">Upload your thesis project video to YouTube, then add the link here</p>
+      </div>
+      <div class="video-info">
+        <div class="video-category">Research · M.Tech Thesis</div>
+        <div class="video-title">Meteoroid Orbit Prediction – Project Walkthrough</div>
+        <div class="video-desc">A walkthrough of the MATLAB model built for simulating meteoroid orbital paths using thermoluminescence data.</div>
       </div>
     </div>
 
+    <div class="video-card fade-in">
+      <!--
+      <div class="video-embed">
+        <iframe src="PASTE_YOUR_YOUTUBE_EMBED_URL_HERE" allowfullscreen title="Defect Detection Demo"></iframe>
+      </div>
+      -->
+      <div class="video-placeholder">
+        <div class="play-icon"></div>
+        <p class="video-placeholder-text">Upload your CNN defect detection demo to YouTube, then add the link here</p>
+      </div>
+      <div class="video-info">
+        <div class="video-category">Deep Learning · Computer Vision</div>
+        <div class="video-title">Civil Structure Defect Detection – Live Demo</div>
+        <div class="video-desc">Live demo of the U-Net CNN model detecting cracks and moisture in real-time from structure images.</div>
+      </div>
+    </div>
+
+    <div class="video-card fade-in">
+      <!--
+      <div class="video-embed">
+        <iframe src="PASTE_YOUR_YOUTUBE_EMBED_URL_HERE" allowfullscreen title="Field Trip Vlog"></iframe>
+      </div>
+      -->
+      <div class="video-placeholder">
+        <div class="play-icon"></div>
+        <p class="video-placeholder-text">Upload your Himalaya field trip footage to YouTube, then add here</p>
+      </div>
+      <div class="video-info">
+        <div class="video-category">Field Work · Geology</div>
+        <div class="video-title">Geological Field Trip – Kumaon Himalayas Vlog</div>
+        <div class="video-desc">Footage and observations from the field excursion to Nainital – Bhimtal – Amritpur, Uttarakhand.</div>
+      </div>
+    </div>
+
+    <div class="video-card fade-in">
+      <!--
+      <div class="video-embed">
+        <iframe src="PASTE_YOUR_YOUTUBE_EMBED_URL_HERE" allowfullscreen title="Day in the life"></iframe>
+      </div>
+      -->
+      <div class="video-placeholder">
+        <div class="play-icon"></div>
+        <p class="video-placeholder-text">Upload any daily life or campus video to YouTube, then add here</p>
+      </div>
+      <div class="video-info">
+        <div class="video-category">Campus Life · IIT Kanpur</div>
+        <div class="video-title">Day in the Life – IIT Kanpur Postgrad Student</div>
+        <div class="video-desc">A glimpse into daily life as a postgraduate student at IIT Kanpur — research, sports, and campus moments.</div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="yt-howto fade-in">
+    <h4>▶ Step-by-step: how to upload &amp; embed your videos</h4>
+    <div class="yt-steps">
+      <div class="yt-step"><div class="step-num">1</div><div class="step-text">Go to <strong>youtube.com</strong> → click your profile photo (top right) → click <strong>YouTube Studio</strong></div></div>
+      <div class="yt-step"><div class="step-num">2</div><div class="step-text">Click <strong>Upload Videos</strong> (top right, with a camera icon) → select the video file from your phone/laptop → add a title → click <strong>Publish</strong></div></div>
+      <div class="yt-step"><div class="step-num">3</div><div class="step-text">Go to your published video on YouTube → click the <strong>Share</strong> button → click <strong>Embed</strong> → copy the URL shown inside <code>src="..."</code> — it looks like <code>https://www.youtube.com/embed/XXXXXXXXXX</code></div></div>
+      <div class="yt-step"><div class="step-num">4</div><div class="step-text">Open <code>index.html</code> → find the video card you want → delete the <code>video-placeholder</code> div → remove the comment markers around the <code>video-embed</code> div → paste your YouTube URL into <code>src="..."</code></div></div>
+      <div class="yt-step"><div class="step-num">5</div><div class="step-text">On GitHub, click <strong>index.html → Edit (pencil icon) → paste the updated code → Commit changes</strong> → your video is live on your website in seconds!</div></div>
+    </div>
   </div>
 </section>
 
@@ -919,8 +594,8 @@
       </div>
       <ul class="exp-points">
         <li>Built predictive regression models (Linear Regression, Random Forest, XGBoost) for temperature estimation from humidity data using EDA, feature engineering, and hyperparameter tuning.</li>
-        <li>Engineered an intelligent fraud detection engine using ML classification algorithms, handling imbalanced data with SMOTE. Benchmarked models using ROC-AUC, Precision, Recall, and F1-score.</li>
-        <li>Delivered end-to-end ML pipelines with Python — data preprocessing, visualization, and model evaluation.</li>
+        <li>Engineered a fraud detection engine using ML classification with SMOTE for imbalanced data. Benchmarked models using ROC-AUC, Precision, Recall, and F1-score.</li>
+        <li>Delivered end-to-end ML pipelines in Python — preprocessing, visualization, and model evaluation.</li>
       </ul>
     </div>
   </div>
@@ -934,41 +609,46 @@
       <h2 class="section-title">Get In Touch</h2>
       <div class="section-rule"></div>
     </div>
-    <p class="contact-intro fade-in">
-      I'm open to research collaborations, data science roles, and interesting projects.
-      Feel free to reach out via email or connect on LinkedIn.
-    </p>
+    <p class="contact-intro fade-in">Open to research collaborations, data science roles, and interesting projects. Feel free to reach out anytime.</p>
     <div class="contact-links fade-in">
-      <a href="mailto:nehalkhan24@iitk.ac.in" class="contact-link">
-        ✉ nehalkhan24@iitk.ac.in
-      </a>
-      <a href="tel:+918791455561" class="contact-link">
-        ☎ +91 8791455561
-      </a>
-      <a href="https://linkedin.com/in/khannehal" target="_blank" class="contact-link">
-        in LinkedIn
-      </a>
-      <a href="https://github.com/Nehalkhan" target="_blank" class="contact-link">
-        ⌥ GitHub
-      </a>
+      <a href="mailto:nehalkhan24@iitk.ac.in" class="contact-link">✉ nehalkhan24@iitk.ac.in</a>
+      <a href="tel:+918791455561" class="contact-link">☎ +91 8791455561</a>
+      <a href="https://linkedin.com/in/khannehal" target="_blank" class="contact-link">in LinkedIn</a>
+      <a href="https://github.com/Nehalkhan" target="_blank" class="contact-link">⌥ GitHub</a>
     </div>
   </div>
 </section>
 
-<footer>
-  © 2025 Nehal Khan · IIT Kanpur · Built with care
-</footer>
+<footer>© 2025 Nehal Khan · IIT Kanpur · Built with care</footer>
 
 <script>
   const observer = new IntersectionObserver((entries) => {
     entries.forEach((entry, i) => {
-      if (entry.isIntersecting) {
-        setTimeout(() => entry.target.classList.add('visible'), i * 80);
-      }
+      if (entry.isIntersecting) setTimeout(() => entry.target.classList.add('visible'), i * 80);
     });
-  }, { threshold: 0.12 });
-
+  }, { threshold: 0.1 });
   document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+
+  function filterGallery(cat, btn) {
+    document.querySelectorAll('.gallery-tab').forEach(t => t.classList.remove('active'));
+    btn.classList.add('active');
+    document.querySelectorAll('.gallery-slot').forEach(slot => {
+      const show = cat === 'all' || slot.dataset.cat === cat;
+      slot.style.display = show ? '' : 'none';
+    });
+  }
+
+  // Auto-hide placeholder text when real img loads
+  document.querySelectorAll('.gallery-slot img').forEach(img => {
+    if (img.src && img.src !== window.location.href) {
+      img.onload = () => {
+        const icon = img.parentElement.querySelector('.slot-icon');
+        const label = img.parentElement.querySelector('.slot-label');
+        if (icon) icon.style.display = 'none';
+        if (label) label.style.display = 'none';
+      };
+    }
+  });
 </script>
 </body>
 </html>
