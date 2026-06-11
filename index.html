@@ -124,33 +124,7 @@
   .howto-box li { font-size:0.88rem; color:var(--warm-gray); margin-bottom:0.5rem; line-height:1.65; }
   .howto-box code { background:var(--light-clay); color:var(--dark-clay); padding:0.1rem 0.4rem; border-radius:3px; font-size:0.82rem; }
 
-  /* ═══ VIDEOS ═══ */
-  #videos { background:var(--stone); }
-  #videos .section-title { color:#fff; }
-  #videos .section-eyebrow { color:var(--clay); }
-  .videos-intro { max-width:680px; margin:0 auto 2.5rem; text-align:center; font-size:0.95rem; color:rgba(255,255,255,0.55); line-height:1.8; }
-  .videos-grid { max-width:1100px; margin:0 auto; display:grid; grid-template-columns:repeat(2,1fr); gap:1.5rem; }
-  .video-card { background:rgba(255,255,255,0.05); border:1px solid rgba(255,255,255,0.1); border-radius:12px; overflow:hidden; transition:transform 0.2s; }
-  .video-card:hover { transform:translateY(-3px); }
-  .video-embed { position:relative; padding-bottom:56.25%; height:0; overflow:hidden; background:#000; }
-  .video-embed iframe { position:absolute; inset:0; width:100%; height:100%; border:none; }
-  .video-placeholder { aspect-ratio:16/9; background:rgba(0,0,0,0.4); display:flex; flex-direction:column; align-items:center; justify-content:center; gap:0.75rem; }
-  .play-icon { width:56px; height:56px; border-radius:50%; background:rgba(193,127,62,0.8); display:flex; align-items:center; justify-content:center; }
-  .play-icon::after { content:''; border-left:20px solid #fff; border-top:12px solid transparent; border-bottom:12px solid transparent; margin-left:5px; }
-  .video-placeholder-text { font-size:0.82rem; color:rgba(255,255,255,0.4); text-align:center; max-width:200px; line-height:1.5; }
-  .video-info { padding:1.2rem 1.5rem; }
-  .video-category { font-size:0.72rem; font-weight:500; letter-spacing:0.12em; text-transform:uppercase; color:var(--clay); margin-bottom:0.4rem; }
-  .video-title { font-weight:500; font-size:1rem; color:#fff; margin-bottom:0.4rem; line-height:1.4; }
-  .video-desc { font-size:0.85rem; color:rgba(255,255,255,0.5); line-height:1.6; }
-
-  .yt-howto { max-width:800px; margin:2.5rem auto 0; background:rgba(255,255,255,0.05); border:1px solid rgba(193,127,62,0.3); border-left:3px solid var(--clay); border-radius:8px; padding:1.5rem 2rem; }
-  .yt-howto h4 { font-size:0.85rem; font-weight:500; color:var(--clay); text-transform:uppercase; letter-spacing:0.08em; margin-bottom:1rem; }
-  .yt-steps { display:flex; flex-direction:column; gap:0.75rem; }
-  .yt-step { display:flex; gap:1rem; align-items:flex-start; }
-  .step-num { min-width:26px; height:26px; border-radius:50%; background:var(--clay); color:#fff; font-size:0.72rem; font-weight:700; display:flex; align-items:center; justify-content:center; margin-top:0.1rem; flex-shrink:0; }
-  .step-text { font-size:0.88rem; color:rgba(255,255,255,0.6); line-height:1.65; }
-  .step-text code { background:rgba(193,127,62,0.2); color:var(--clay); padding:0.1rem 0.4rem; border-radius:3px; font-size:0.82rem; }
-  .step-text strong { color:rgba(255,255,255,0.85); font-weight:500; }
+ 
 
   /* EXPERIENCE */
   #experience { background:var(--off-white); }
@@ -223,8 +197,16 @@
   </div>
   <div class="hero-photo-wrap fade-in">
     <div class="photo-frame">
-     
-      <img src="photo.JPG" alt="Nehal Khan">
+      <!--
+      ══════════════════════════════════════
+      HOW TO ADD YOUR PHOTO:
+      1. Save your photo as "photo.jpg"
+      2. Put it in the same folder as index.html
+      3. Delete the photo-placeholder div below
+      4. Remove the comment markers around the img tag
+      ══════════════════════════════════════
+      -->
+      <img src="photo.jpg" alt="Nehal Khan">
               
         
    </div>
@@ -382,7 +364,7 @@
     -->
 
     <div class="gallery-slot" data-cat="field">
-      <img src="" alt="Kumaon Himalaya">
+      <img src="gallery/himalaya1.jpg" alt="Kumaon Himalaya">
       <div class="slot-icon">🏔</div>
       <div class="slot-label">Your photo from<br>Kumaon Himalaya trip</div>
       <div class="slot-caption">Kumaon Himalaya – Nainital, Bhimtal, May 2022</div>
@@ -424,137 +406,33 @@
     </div>
 
     <div class="gallery-slot" data-cat="campus">
-      <img src="" alt="Gold medal volleyball">
+      <img src="volleyball.png" alt="Gold medal volleyball">
       <div class="slot-icon">🏆</div>
       <div class="slot-label">Gold medal photo<br>Volleyball – ESS 2025</div>
       <div class="slot-caption">Gold Medal – Volleyball, ESS Sports Meet 2025</div>
     </div>
 
     <div class="gallery-slot" data-cat="campus">
-      <img src="" alt="Chess silver medal">
+      <img src="chess.jpg" alt="Chess silver medal">
       <div class="slot-icon">♟</div>
       <div class="slot-label">Silver medal photo<br>Chess – ESS 2025</div>
       <div class="slot-caption">Silver Medal – Chess, ESS Sports Meet 2025</div>
     </div>
 
     <div class="gallery-slot" data-cat="campus">
-      <img src="" alt="IIT Kanpur campus">
+      <img src="campus.jpg" alt="IIT Kanpur campus">
       <div class="slot-icon">🎓</div>
       <div class="slot-label">Any campus or<br>daily life photo</div>
       <div class="slot-caption">Life at IIT Kanpur</div>
     </div>
 
-  </div>
 
-  <div class="howto-box fade-in">
-    
-
-<!-- ══════════ VIDEOS ══════════ -->
-<section id="videos">
-  <div class="section-header fade-in">
-    <p class="section-eyebrow">Watch My Work</p>
-    <h2 class="section-title">Videos</h2>
-    <div class="section-rule"></div>
-  </div>
-  <p class="videos-intro fade-in">Project walkthroughs, field footage, and daily life — upload to YouTube first, then paste the link below to embed here on your website.</p>
-
-  <div class="videos-grid">
-
-    <!--
-    ════════════════════════════════════════
-    HOW TO ADD YOUR VIDEOS:
-
-    1. Upload video to YouTube (youtube.com → your profile icon → YouTube Studio → Upload)
-    2. Go to your uploaded video → click SHARE → click EMBED
-    3. Copy the URL from inside src="..." — it looks like:
-       https://www.youtube.com/embed/abc123XYZ
-    4. Come back here and find the video card you want
-    5. DELETE the video-placeholder div
-    6. UNCOMMENT the video-embed div (remove the  and  around it)
-    7. Paste your YouTube URL inside src="..."
-    8. Update the title and description text
-    9. Commit to GitHub — your video appears live!
-    ════════════════════════════════════════
-    -->
-
-    <div class="video-card fade-in">
-      <!--
-      <div class="video-embed">
-        <iframe src="PASTE_YOUR_YOUTUBE_EMBED_URL_HERE" allowfullscreen title="Meteoroid Orbit Prediction"></iframe>
-      </div>
-      -->
-      <div class="video-placeholder">
-        <div class="play-icon"></div>
-        <p class="video-placeholder-text">Upload your thesis project video to YouTube, then add the link here</p>
-      </div>
-      <div class="video-info">
-        <div class="video-category">Research · M.Tech Thesis</div>
-        <div class="video-title">Meteoroid Orbit Prediction – Project Walkthrough</div>
-        <div class="video-desc">A walkthrough of the MATLAB model built for simulating meteoroid orbital paths using thermoluminescence data.</div>
-      </div>
-    </div>
-
-    <div class="video-card fade-in">
-      <!--
-      <div class="video-embed">
-        <iframe src="PASTE_YOUR_YOUTUBE_EMBED_URL_HERE" allowfullscreen title="Defect Detection Demo"></iframe>
-      </div>
-      -->
-      <div class="video-placeholder">
-        <div class="play-icon"></div>
-        <p class="video-placeholder-text">Upload your CNN defect detection demo to YouTube, then add the link here</p>
-      </div>
-      <div class="video-info">
-        <div class="video-category">Deep Learning · Computer Vision</div>
-        <div class="video-title">Civil Structure Defect Detection – Live Demo</div>
-        <div class="video-desc">Live demo of the U-Net CNN model detecting cracks and moisture in real-time from structure images.</div>
-      </div>
-    </div>
-
-    <div class="video-card fade-in">
-      <!--
-      <div class="video-embed">
-        <iframe src="PASTE_YOUR_YOUTUBE_EMBED_URL_HERE" allowfullscreen title="Field Trip Vlog"></iframe>
-      </div>
-      -->
-      <div class="video-placeholder">
-        <div class="play-icon"></div>
-        <p class="video-placeholder-text">Upload your Himalaya field trip footage to YouTube, then add here</p>
-      </div>
-      <div class="video-info">
-        <div class="video-category">Field Work · Geology</div>
-        <div class="video-title">Geological Field Trip – Kumaon Himalayas Vlog</div>
-        <div class="video-desc">Footage and observations from the field excursion to Nainital – Bhimtal – Amritpur, Uttarakhand.</div>
-      </div>
-    </div>
-
-    <div class="video-card fade-in">
-      <!--
-      <div class="video-embed">
-        <iframe src="PASTE_YOUR_YOUTUBE_EMBED_URL_HERE" allowfullscreen title="Day in the life"></iframe>
-      </div>
-      -->
-      <div class="video-placeholder">
-        <div class="play-icon"></div>
-        <p class="video-placeholder-text">Upload any daily life or campus video to YouTube, then add here</p>
-      </div>
-      <div class="video-info">
-        <div class="video-category">Campus Life · IIT Kanpur</div>
-        <div class="video-title">Day in the Life – IIT Kanpur Postgrad Student</div>
-        <div class="video-desc">A glimpse into daily life as a postgraduate student at IIT Kanpur — research, sports, and campus moments.</div>
-      </div>
-    </div>
+</section>
+   
 
   </div>
 
-  <div class="yt-howto fade-in">
-    <h4>▶ Step-by-step: how to upload &amp; embed your videos</h4>
-    <div class="yt-steps">
-      <div class="yt-step"><div class="step-num">1</div><div class="step-text">Go to <strong>youtube.com</strong> → click your profile photo (top right) → click <strong>YouTube Studio</strong></div></div>
-      <div class="yt-step"><div class="step-num">2</div><div class="step-text">Click <strong>Upload Videos</strong> (top right, with a camera icon) → select the video file from your phone/laptop → add a title → click <strong>Publish</strong></div></div>
-      <div class="yt-step"><div class="step-num">3</div><div class="step-text">Go to your published video on YouTube → click the <strong>Share</strong> button → click <strong>Embed</strong> → copy the URL shown inside <code>src="..."</code> — it looks like <code>https://www.youtube.com/embed/XXXXXXXXXX</code></div></div>
-      <div class="yt-step"><div class="step-num">4</div><div class="step-text">Open <code>index.html</code> → find the video card you want → delete the <code>video-placeholder</code> div → remove the comment markers around the <code>video-embed</code> div → paste your YouTube URL into <code>src="..."</code></div></div>
-      <div class="yt-step"><div class="step-num">5</div><div class="step-text">On GitHub, click <strong>index.html → Edit (pencil icon) → paste the updated code → Commit changes</strong> → your video is live on your website in seconds!</div></div>
+
     </div>
   </div>
 </section>
