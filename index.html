@@ -3,498 +3,581 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<!-- ══ SEO META TAGS ══ -->
-<title>Nehal Khan | Geological Technology & Data Science | IIT Kanpur</title>
-<meta name="description" content="Nehal Khan – Final Year M.Tech student at IIT Kanpur in Geological Technology. Researcher in meteoroid orbital prediction using thermoluminescence, machine learning, and data science.">
-<meta name="keywords" content="Nehal Khan, IIT Kanpur, Geological Technology, Data Science, Machine Learning, Thermoluminescence, Meteoroid, MATLAB, Python, QGIS">
-<meta name="author" content="Nehal Khan">
-<meta name="robots" content="index, follow">
-<link rel="canonical" href="https://nehalkhan24.github.io/">
-
-<!-- ══ OPEN GRAPH (for LinkedIn, WhatsApp preview) ══ -->
-<meta property="og:title" content="Nehal Khan | IIT Kanpur | Geological Technology & Data Science">
-<meta property="og:description" content="Final Year M.Tech researcher at IIT Kanpur. Predicting meteoroid orbits using thermoluminescence. CPI 8.36. Academic Excellence Award 2024.">
-<meta property="og:type" content="website">
-<meta property="og:url" content="https://nehalkhan24.github.io/">
-<meta property="og:image" content="https://nehalkhan24.github.io/photo.JPG">
-
-<!-- ══ GOOGLE STRUCTURED DATA (helps Google understand who you are) ══ -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Person",
-  "name": "Nehal Khan",
-  "jobTitle": "M.Tech Researcher, Geological Technology",
-  "affiliation": {
-    "@type": "EducationalOrganization",
-    "name": "Indian Institute of Technology Kanpur"
-  },
-  "email": "nehalkhanamu@gmail.com",
-  "telephone": "+918791455561",
-  "url": "https://nehalkhan24.github.io/",
-  "sameAs": [
-    "https://linkedin.com/in/khannehal",
-    "https://github.com/NehalKhan-213"
-  ],
-  "knowsAbout": ["Geological Technology","Thermoluminescence","Machine Learning","Data Science","MATLAB","Python","Orbital Mechanics"]
-}
-</script>
-
-<!-- ══ FONTS: display=swap prevents render blocking ══ -->
+<title>Nehal Khan — Geological Technology &amp; Data Science</title>
+<meta name="description" content="Nehal Khan — M.Tech Geological Technology, IIT Kanpur. Data science, machine learning, and Earth science.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
-<noscript><link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet"></noscript>
-
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Public+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
 <style>
-  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-  :root {
-    --stone: #1a1814; --clay: #c17f3e; --teal: #2a6b6b;
-    --warm-gray: #6b6460; --light-clay: #f0e4d0; --dark-clay: #8a5a28;
-    --off-white: #faf8f4; --section-pad: 5rem 2rem;
+  *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+  :root{
+    --stone:#191510; --clay:#c17f3e; --teal:#2a6b6b;
+    --warm-gray:#6b6460; --light-clay:#f2e7d6; --dark-clay:#8a5a28;
+    --off-white:#faf7f1; --line:rgba(193,127,62,0.18);
   }
-  html { scroll-behavior: smooth; }
-  body { font-family: 'DM Sans', system-ui, sans-serif; background: var(--off-white); color: var(--stone); line-height: 1.7; overflow-x: hidden; }
+  html{scroll-behavior:smooth;}
+  body{font-family:'Public Sans',system-ui,sans-serif;background:var(--off-white);color:var(--stone);line-height:1.7;-webkit-font-smoothing:antialiased;overflow-x:hidden;}
+  ::selection{background:var(--clay);color:#fff;}
+  img{max-width:100%;display:block;}
+  a{color:inherit;}
+  :focus-visible{outline:2px solid var(--clay);outline-offset:2px;}
 
-  /* NAV */
-  nav { position:fixed; top:0; left:0; right:0; z-index:100; display:flex; justify-content:space-between; align-items:center; padding:1.1rem 3rem; background:rgba(250,248,244,0.93); backdrop-filter:blur(8px); border-bottom:1px solid rgba(193,127,62,0.15); }
-  .nav-logo { font-family:'Playfair Display',Georgia,serif; font-size:1.3rem; font-weight:700; color:var(--clay); text-decoration:none; }
-  .nav-links { display:flex; gap:1.6rem; list-style:none; flex-wrap:wrap; }
-  .nav-links a { text-decoration:none; color:var(--warm-gray); font-size:0.8rem; font-weight:500; letter-spacing:0.08em; text-transform:uppercase; transition:color 0.2s; }
-  .nav-links a:hover { color:var(--clay); }
+  @keyframes fadeUp{from{opacity:0;transform:translateY(24px);}to{opacity:1;transform:none;}}
+  @keyframes certScroll{from{transform:translateX(0);}to{transform:translateX(-50%);}}
+  [data-marquee]:hover{animation-play-state:paused;}
+  [data-fade]{animation:fadeUp .7s ease both;}
 
-  /* HERO */
-  #hero { min-height:100vh; display:grid; grid-template-columns:1fr 1fr; align-items:center; padding:6rem 4rem 4rem; background:linear-gradient(135deg,var(--off-white) 60%,var(--light-clay) 100%); position:relative; overflow:hidden; }
-  #hero::before { content:''; position:absolute; top:-20%; right:-10%; width:600px; height:600px; background:radial-gradient(circle,rgba(193,127,62,0.1) 0%,transparent 70%); pointer-events:none; }
-  .hero-text { max-width:560px; }
-  .hero-badge { display:inline-block; background:var(--clay); color:#fff; font-size:0.72rem; font-weight:500; letter-spacing:0.15em; text-transform:uppercase; padding:0.4rem 1rem; border-radius:2px; margin-bottom:1.5rem; }
-  .hero-name { font-family:'Playfair Display',Georgia,serif; font-size:clamp(2.8rem,5vw,4.5rem); font-weight:700; line-height:1.1; color:var(--stone); margin-bottom:0.5rem; }
-  .hero-name span { color:var(--clay); }
-  .hero-title { font-size:1.1rem; font-weight:300; color:var(--warm-gray); margin-bottom:1.5rem; }
-  .hero-desc { font-size:1rem; color:var(--stone); opacity:0.75; margin-bottom:2.5rem; max-width:460px; line-height:1.8; }
-  .hero-cta { display:flex; gap:1rem; flex-wrap:wrap; }
-  .btn-primary { display:inline-block; background:var(--clay); color:#fff; padding:0.85rem 2rem; font-size:0.9rem; font-weight:500; text-decoration:none; border-radius:4px; transition:background 0.2s,transform 0.15s; }
-  .btn-primary:hover { background:var(--dark-clay); transform:translateY(-1px); }
-  .btn-outline { display:inline-block; border:1.5px solid var(--clay); color:var(--clay); padding:0.85rem 2rem; font-size:0.9rem; font-weight:500; text-decoration:none; border-radius:4px; transition:background 0.2s,transform 0.15s; }
-  .btn-outline:hover { background:var(--light-clay); transform:translateY(-1px); }
-
-  /* PHOTO */
-  .hero-photo-wrap { display:flex; justify-content:center; align-items:center; position:relative; }
-  .photo-frame { width:340px; height:400px; border-radius:12px 12px 80px 12px; background:var(--light-clay); border:3px solid rgba(193,127,62,0.3); overflow:hidden; position:relative; }
-  .photo-frame img { width:100%; height:100%; object-fit:cover; display:block; }
-  
-
-  /* STATS */
-  .stats-bar { background:var(--stone); padding:2rem 4rem; display:grid; grid-template-columns:repeat(4,1fr); gap:1rem; text-align:center; }
-  .stat { border-right:1px solid rgba(255,255,255,0.1); }
-  .stat:last-child { border-right:none; }
-  .stat-num { font-family:'Playfair Display',Georgia,serif; font-size:2rem; color:var(--clay); font-weight:700; }
-  .stat-label { font-size:0.78rem; color:rgba(255,255,255,0.5); text-transform:uppercase; letter-spacing:0.08em; margin-top:0.2rem; }
-
-  /* SECTIONS */
-  section { padding:var(--section-pad); }
-  .section-header { text-align:center; margin-bottom:3.5rem; }
-  .section-eyebrow { font-size:0.72rem; font-weight:500; letter-spacing:0.2em; text-transform:uppercase; color:var(--clay); margin-bottom:0.75rem; }
-  .section-title { font-family:'Playfair Display',Georgia,serif; font-size:clamp(1.8rem,3vw,2.6rem); font-weight:700; color:var(--stone); }
-  .section-rule { width:48px; height:3px; background:var(--clay); margin:1rem auto 0; border-radius:2px; }
-
-  /* ABOUT */
-  #about { background:var(--off-white); }
-  .about-grid { max-width:1000px; margin:0 auto; display:grid; grid-template-columns:1fr 1fr; gap:3rem; align-items:start; }
-  .about-text p { font-size:1rem; color:var(--warm-gray); margin-bottom:1.2rem; line-height:1.85; }
-  .about-highlights { display:flex; flex-direction:column; gap:1rem; }
-  .highlight-card { background:#fff; border:1px solid rgba(193,127,62,0.2); border-left:3px solid var(--clay); border-radius:6px; padding:1rem 1.25rem; }
-  .highlight-card h4 { font-size:0.85rem; font-weight:500; color:var(--clay); text-transform:uppercase; letter-spacing:0.06em; margin-bottom:0.3rem; }
-  .highlight-card p { font-size:0.9rem; color:var(--warm-gray); }
-
-  /* EDUCATION */
-  #education { background:var(--light-clay); }
-  .edu-grid { max-width:900px; margin:0 auto; display:flex; flex-direction:column; gap:1rem; }
-  .edu-card { background:#fff; border-radius:10px; padding:1.5rem 2rem; display:grid; grid-template-columns:auto 1fr auto; align-items:center; gap:1.5rem; border:1px solid rgba(193,127,62,0.15); transition:transform 0.2s,box-shadow 0.2s; }
-  .edu-card:hover { transform:translateY(-2px); box-shadow:0 8px 30px rgba(0,0,0,0.08); }
-  .edu-year { font-size:0.8rem; color:var(--clay); font-weight:500; white-space:nowrap; }
-  .edu-degree { font-weight:500; font-size:1rem; color:var(--stone); }
-  .edu-institute { font-size:0.88rem; color:var(--warm-gray); margin-top:0.2rem; }
-  .edu-cpi { font-family:'Playfair Display',Georgia,serif; font-size:1.4rem; font-weight:700; color:var(--clay); }
-
-  /* SKILLS */
-  #skills { background:var(--off-white); }
-  .skills-grid { max-width:1000px; margin:0 auto; display:grid; grid-template-columns:repeat(3,1fr); gap:1.5rem; }
-  .skill-category { background:#fff; border:1px solid rgba(193,127,62,0.15); border-radius:10px; padding:1.5rem; }
-  .skill-category h3 { font-size:0.78rem; font-weight:500; color:var(--clay); text-transform:uppercase; letter-spacing:0.1em; margin-bottom:1rem; padding-bottom:0.75rem; border-bottom:1px solid var(--light-clay); }
-  .skill-tags { display:flex; flex-wrap:wrap; gap:0.5rem; }
-  .tag { background:var(--light-clay); color:var(--dark-clay); font-size:0.78rem; padding:0.3rem 0.75rem; border-radius:20px; }
-
-  /* PROJECTS */
-  #projects { background:var(--stone); color:#fff; }
-  #projects .section-title { color:#fff; }
-  .projects-grid { max-width:1100px; margin:0 auto; display:grid; grid-template-columns:repeat(2,1fr); gap:1.5rem; }
-  .project-card { background:rgba(255,255,255,0.05); border:1px solid rgba(255,255,255,0.1); border-radius:12px; padding:1.75rem; transition:background 0.2s,transform 0.2s; position:relative; overflow:hidden; }
-  .project-card:hover { background:rgba(255,255,255,0.09); transform:translateY(-2px); }
-  .project-number { font-family:'Playfair Display',Georgia,serif; font-size:3rem; font-weight:700; color:rgba(193,127,62,0.2); position:absolute; top:0.5rem; right:1rem; }
-  .project-type { font-size:0.72rem; font-weight:500; letter-spacing:0.12em; text-transform:uppercase; color:var(--clay); margin-bottom:0.75rem; }
-  .project-title { font-family:'Playfair Display',Georgia,serif; font-size:1.2rem; font-weight:600; color:#fff; margin-bottom:0.75rem; line-height:1.35; }
-  .project-desc { font-size:0.9rem; color:rgba(255,255,255,0.6); line-height:1.7; margin-bottom:1rem; }
-  .project-tags { display:flex; flex-wrap:wrap; gap:0.4rem; }
-  .project-tag { background:rgba(193,127,62,0.15); color:var(--clay); font-size:0.73rem; padding:0.25rem 0.65rem; border-radius:3px; font-weight:500; }
-  .project-link { display:inline-block; margin-top:1rem; font-size:0.8rem; color:var(--clay); text-decoration:none; border:1px solid rgba(193,127,62,0.4); border-radius:4px; padding:0.3rem 0.8rem; transition:background 0.2s; }
-  .project-link:hover { background:rgba(193,127,62,0.15); }
-
-  /* GALLERY */
-  #gallery { background:var(--off-white); }
-  .gallery-intro { max-width:680px; margin:0 auto 2.5rem; text-align:center; font-size:0.95rem; color:var(--warm-gray); line-height:1.8; }
-  .gallery-tabs { display:flex; justify-content:center; gap:0.75rem; margin-bottom:2.5rem; flex-wrap:wrap; }
-  .gallery-tab { padding:0.5rem 1.4rem; border:1.5px solid rgba(193,127,62,0.35); border-radius:30px; font-size:0.82rem; font-weight:500; color:var(--warm-gray); cursor:pointer; background:transparent; transition:all 0.2s; font-family:'DM Sans',system-ui,sans-serif; }
-  .gallery-tab.active, .gallery-tab:hover { background:var(--clay); color:#fff; border-color:var(--clay); }
-  .gallery-grid { max-width:1100px; margin:0 auto; display:grid; grid-template-columns:repeat(3,1fr); gap:1rem; }
-  .gallery-slot { aspect-ratio:4/3; border-radius:10px; overflow:hidden; position:relative; background:var(--light-clay); cursor:pointer; border:1.5px dashed rgba(193,127,62,0.35); display:flex; flex-direction:column; align-items:center; justify-content:center; gap:0.5rem; transition:transform 0.2s,box-shadow 0.2s; }
-  .gallery-slot:hover { transform:scale(1.02); box-shadow:0 8px 30px rgba(0,0,0,0.1); }
-  .gallery-slot img { width:100%; height:100%; object-fit:cover; position:absolute; inset:0; }
-  .slot-label { font-size:0.75rem; color:var(--warm-gray); text-align:center; padding:0 1rem; line-height:1.5; position:relative; z-index:1; }
-  .slot-icon { font-size:1.8rem; position:relative; z-index:1; }
-  .slot-caption { position:absolute; bottom:0; left:0; right:0; background:linear-gradient(transparent,rgba(26,24,20,0.85)); color:#fff; font-size:0.78rem; padding:2rem 0.75rem 0.6rem; opacity:0; transition:opacity 0.2s; }
-  .gallery-slot:hover .slot-caption { opacity:1; }
-
-  /* EXPERIENCE */
-  #experience { background:var(--off-white); }
-  .exp-container { max-width:800px; margin:0 auto; }
-  .exp-card { background:#fff; border:1px solid rgba(193,127,62,0.15); border-radius:12px; padding:2rem; }
-  .exp-header { display:flex; justify-content:space-between; align-items:flex-start; margin-bottom:1.2rem; flex-wrap:wrap; gap:0.5rem; }
-  .exp-role { font-weight:500; font-size:1.1rem; color:var(--stone); }
-  .exp-company { font-size:0.88rem; color:var(--warm-gray); margin-top:0.15rem; }
-  .exp-duration { background:var(--light-clay); color:var(--dark-clay); font-size:0.78rem; padding:0.3rem 0.8rem; border-radius:20px; white-space:nowrap; }
-  .exp-points { list-style:none; padding:0; }
-  .exp-points li { font-size:0.92rem; color:var(--warm-gray); padding:0.5rem 0 0.5rem 1.2rem; border-bottom:1px solid var(--light-clay); line-height:1.65; position:relative; }
-  .exp-points li::before { content:'—'; position:absolute; left:0; color:var(--clay); }
-  .exp-points li:last-child { border-bottom:none; }
-
-  /* CONTACT */
-  #contact { background:var(--light-clay); text-align:center; }
-  .contact-inner { max-width:600px; margin:0 auto; }
-  .contact-intro { font-size:1.05rem; color:var(--warm-gray); margin-bottom:2.5rem; line-height:1.8; }
-  .contact-links { display:flex; justify-content:center; gap:1.5rem; flex-wrap:wrap; }
-  .contact-link { display:flex; align-items:center; gap:0.5rem; text-decoration:none; color:var(--stone); font-size:0.95rem; font-weight:500; padding:0.75rem 1.5rem; background:#fff; border-radius:6px; border:1px solid rgba(193,127,62,0.2); transition:transform 0.2s,border-color 0.2s,color 0.2s; }
-  .contact-link:hover { transform:translateY(-2px); border-color:var(--clay); color:var(--clay); }
-
-  footer { background:var(--stone); text-align:center; padding:2rem; color:rgba(255,255,255,0.25); font-size:0.8rem; letter-spacing:0.05em; }
-
-  /* ANIMATIONS */
-  .fade-in { opacity:0; transform:translateY(24px); transition:opacity 0.6s ease,transform 0.6s ease; }
-  .fade-in.visible { opacity:1; transform:none; }
-
-  /* MOBILE */
-  @media (max-width:768px) {
-    nav { padding:1rem 1.5rem; }
-    .nav-links { gap:0.7rem; }
-    .nav-links a { font-size:0.7rem; }
-    #hero { grid-template-columns:1fr; padding:5rem 1.5rem 3rem; text-align:center; gap:2rem; }
-    .hero-photo-wrap { order:-1; }
-    .photo-frame { width:220px; height:260px; }
-    .photo-badge { display:none; }
-    .hero-cta { justify-content:center; }
-    .stats-bar { grid-template-columns:repeat(2,1fr); padding:2rem 1rem; }
-    .stat { border-right:none; border-bottom:1px solid rgba(255,255,255,0.1); padding-bottom:1rem; }
-    .about-grid,.skills-grid,.projects-grid,.gallery-grid { grid-template-columns:1fr; }
-    .edu-card { grid-template-columns:1fr; text-align:center; }
-    section { padding:3rem 1.5rem; }
-    .photo-frame { width:200px; height:240px; }
+  @media(max-width:820px){
+    [data-collapse]{grid-template-columns:1fr !important;}
+    [data-hero]{grid-template-columns:1fr !important;text-align:center;padding:6rem 1.4rem 3rem !important;}
+    [data-hero] [data-photowrap]{order:-1;}
+    [data-stats]{grid-template-columns:repeat(2,1fr) !important;padding:1.6rem !important;}
+    [data-navlinks]{display:none !important;}
+    section{padding:3.4rem 1.4rem !important;}
+  }
+  @media(prefers-reduced-motion:reduce){
+    *{animation-duration:.001ms !important;animation-iteration-count:1 !important;transition-duration:.001ms !important;scroll-behavior:auto !important;}
   }
 </style>
 </head>
 <body>
 
-<nav>
-  <a href="#hero" class="nav-logo">NK</a>
-  <ul class="nav-links">
-    <li><a href="#about">About</a></li>
-    <li><a href="#education">Education</a></li>
-    <li><a href="#projects">Projects</a></li>
-    <li><a href="#gallery">Gallery</a></li>
-    <li><a href="#contact">Contact</a></li>
+<nav style="position:fixed;top:0;left:0;right:0;z-index:100;display:flex;justify-content:space-between;align-items:center;padding:1.05rem 3rem;background:rgba(250,247,241,0.86);backdrop-filter:blur(10px);border-bottom:1px solid var(--line);">
+  <a href="#hero" style="font-family:'Fraunces',serif;font-size:1.35rem;font-weight:600;letter-spacing:.02em;color:var(--clay);text-decoration:none;">Nehal Khan</a>
+  <ul data-navlinks style="display:flex;gap:1.7rem;list-style:none;">
+    <li><a href="#about" style="text-decoration:none;color:var(--warm-gray);font-size:.74rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;">About</a></li>
+    <li><a href="#education" style="text-decoration:none;color:var(--warm-gray);font-size:.74rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;">Education</a></li>
+    <li><a href="#projects" style="text-decoration:none;color:var(--warm-gray);font-size:.74rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;">Projects</a></li>
+    <li><a href="#gallery" style="text-decoration:none;color:var(--warm-gray);font-size:.74rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;">Gallery</a></li>
+    <li><a href="#achievements" style="text-decoration:none;color:var(--warm-gray);font-size:.74rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;">Achievements</a></li>
+    <li><a href="#certificates" style="text-decoration:none;color:var(--warm-gray);font-size:.74rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;">Certificates</a></li>
+    <li><a href="#contact" style="text-decoration:none;color:var(--warm-gray);font-size:.74rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;">Contact</a></li>
   </ul>
 </nav>
 
 <!-- HERO -->
-<section id="hero">
-  <div class="hero-text fade-in">
-    <span class="hero-badge">IIT Kanpur · M.Tech 2026</span>
-    <h1 class="hero-name">Nehal<br><span>Khan</span></h1>
-    <p class="hero-title">Geological Technology &amp; Data Science</p>
-    <p class="hero-desc">Final Year Postgraduate at IIT Kanpur, merging the precision of Earth Science with the power of machine learning — from meteoroid orbital prediction to fraud detection engines.</p>
-    <div class="hero-cta">
-      <a href="#projects" class="btn-primary">View Projects</a>
-      <a href="#contact" class="btn-outline">Get in Touch</a>
+<section id="hero" data-hero style="min-height:100vh;display:grid;grid-template-columns:1.05fr .95fr;align-items:center;gap:3rem;padding:7rem 4rem 4rem;background:radial-gradient(120% 120% at 85% 0%,var(--light-clay) 0%,var(--off-white) 55%);position:relative;overflow:hidden;">
+  <div style="position:absolute;inset:0;background-image:linear-gradient(var(--line) 1px,transparent 1px),linear-gradient(90deg,var(--line) 1px,transparent 1px);background-size:64px 64px;opacity:.4;mask-image:radial-gradient(120% 120% at 85% 0%,#000 0%,transparent 60%);pointer-events:none;"></div>
+  <div data-fade style="max-width:560px;position:relative;">
+    <span style="display:inline-flex;align-items:center;gap:.5rem;background:var(--clay);color:#fff;font-size:.68rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;padding:.42rem 1rem;border-radius:100px;margin-bottom:1.6rem;">IIT Kanpur · M.Tech Graduate, Class of 2026</span>
+    <h1 style="font-family:'Fraunces',serif;font-size:clamp(3rem,5.5vw,4.8rem);font-weight:600;line-height:1.02;letter-spacing:-.02em;margin-bottom:.9rem;">Nehal <span style="color:var(--clay);font-style:italic;">Khan</span></h1>
+    <p style="font-size:1.15rem;font-weight:400;color:var(--stone);margin-bottom:1.1rem;">Geological Technology &amp; Data Science</p>
+    <p style="font-size:1rem;color:var(--warm-gray);margin-bottom:2.4rem;max-width:470px;">M.Tech graduate from IIT Kanpur, honoured with the Dr. Vishwanath Bajpai Award at the 59th Convocation for the best thesis and academic excellence — merging the precision of Earth Science with the power of machine learning.</p>
+    <div style="display:flex;gap:.9rem;flex-wrap:wrap;">
+      <a href="#projects" class="btn-lift" style="display:inline-block;background:var(--clay);color:#fff;padding:.9rem 2rem;font-size:.9rem;font-weight:600;text-decoration:none;border-radius:6px;box-shadow:0 6px 20px rgba(193,127,62,.25);transition:transform .15s;">View Projects</a>
+      <a href="#contact" class="btn-lift" style="display:inline-block;border:1.5px solid var(--clay);color:var(--clay);padding:.9rem 2rem;font-size:.9rem;font-weight:600;text-decoration:none;border-radius:6px;transition:transform .15s;">Get in Touch</a>
     </div>
   </div>
-  <div class="hero-photo-wrap fade-in">
-    <div class="photo-frame">
-      <img src="photo.JPG" alt="Nehal Khan – M.Tech IIT Kanpur" width="340" height="400" fetchpriority="high">
+  <div data-photowrap data-fade style="display:flex;justify-content:center;align-items:center;position:relative;">
+    <div style="width:340px;height:410px;border-radius:14px 14px 90px 14px;background:var(--light-clay);border:1px solid var(--line);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:1rem;position:relative;overflow:hidden;box-shadow:0 30px 60px -30px rgba(25,21,16,.4);">
+      <div class="ph-fallback" style="position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:1rem;">
+        <div style="width:104px;height:104px;border-radius:50%;background:var(--clay);display:flex;align-items:center;justify-content:center;font-family:'Fraunces',serif;font-size:2.3rem;font-weight:600;color:#fff;">NK</div>
+              </div>
+      <img src="photo.jpg" alt="Nehal Khan" onerror="this.style.display='none'" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;">
     </div>
   </div>
 </section>
 
 <!-- STATS -->
-<div class="stats-bar">
-  <div class="stat fade-in"><div class="stat-num">4+</div><div class="stat-label">Key Projects</div></div>
-  <div class="stat fade-in"><div class="stat-num">8.36</div><div class="stat-label">CPI at IIT Kanpur</div></div>
-  <div class="stat fade-in"><div class="stat-num">10+</div><div class="stat-label">Technical Skills</div></div>
-  <div class="stat fade-in"><div class="stat-num">3</div><div class="stat-label">Field Excursions</div></div>
+<div data-stats style="background:var(--stone);padding:2.2rem 4rem;display:grid;grid-template-columns:repeat(4,1fr);gap:1rem;text-align:center;">
+  <div data-fade style="padding:0 1rem;border-right:1px solid rgba(255,255,255,.09);">
+    <div style="font-family:'Fraunces',serif;font-size:2.1rem;font-weight:600;color:var(--clay);">4+</div>
+    <div style="font-size:.74rem;color:rgba(255,255,255,.5);text-transform:uppercase;letter-spacing:.1em;margin-top:.25rem;">Key Projects</div>
+  </div>
+  <div data-fade style="padding:0 1rem;border-right:1px solid rgba(255,255,255,.09);">
+    <div style="font-family:'Fraunces',serif;font-size:2.1rem;font-weight:600;color:var(--clay);">8.36</div>
+    <div style="font-size:.74rem;color:rgba(255,255,255,.5);text-transform:uppercase;letter-spacing:.1em;margin-top:.25rem;">CPI at IIT Kanpur</div>
+  </div>
+  <div data-fade style="padding:0 1rem;border-right:1px solid rgba(255,255,255,.09);">
+    <div style="font-family:'Fraunces',serif;font-size:2.1rem;font-weight:600;color:var(--clay);">10+</div>
+    <div style="font-size:.74rem;color:rgba(255,255,255,.5);text-transform:uppercase;letter-spacing:.1em;margin-top:.25rem;">Technical Skills</div>
+  </div>
+  <div data-fade style="padding:0 1rem;">
+    <div style="font-family:'Fraunces',serif;font-size:2.1rem;font-weight:600;color:var(--clay);">3</div>
+    <div style="font-size:.74rem;color:rgba(255,255,255,.5);text-transform:uppercase;letter-spacing:.1em;margin-top:.25rem;">Field Excursions</div>
+  </div>
 </div>
 
 <!-- ABOUT -->
-<section id="about">
-  <div class="section-header fade-in">
-    <p class="section-eyebrow">Who I Am</p>
-    <h2 class="section-title">About Me</h2>
-    <div class="section-rule"></div>
+<section id="about" style="padding:5.5rem 2rem;">
+  <div data-fade style="text-align:center;margin-bottom:3.5rem;">
+    <p style="font-size:.72rem;font-weight:600;letter-spacing:.22em;text-transform:uppercase;color:var(--clay);margin-bottom:.7rem;">Who I Am</p>
+    <h2 style="font-family:'Fraunces',serif;font-size:clamp(2rem,3.4vw,2.8rem);font-weight:600;letter-spacing:-.01em;">About Me</h2>
+    <div style="width:52px;height:3px;background:var(--clay);margin:1.1rem auto 0;border-radius:2px;"></div>
   </div>
-  <div class="about-grid">
-    <div class="about-text fade-in">
-      <p>I'm Nehal Khan, a final year M.Tech student in Geological Technology at IIT Kanpur with a deep interest in the intersection of Earth Science and Data Science.</p>
-      <p>My work spans predictive modeling, deep learning for structural health monitoring, and computational models for meteoroid orbital paths — blending geology with cutting-edge machine learning to solve real-world problems.</p>
-      <p>Beyond research, I've built data science products in internships, led logistics for the EAGE Student Chapter, and launched a local tutoring startup. I bring both technical depth and entrepreneurial thinking.</p>
+  <div data-collapse style="max-width:1000px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:start;">
+    <div data-fade>
+      <p style="font-size:1.02rem;color:var(--warm-gray);margin-bottom:1.2rem;">I'm Nehal Khan, an M.Tech graduate in Geological Technology from IIT Kanpur with a deep interest in the intersection of Earth Science and Data Science. I was honoured with the Dr. Vishwanath Bajpai Award at the 59th Convocation of IIT Kanpur for the best thesis and academic excellence.</p>
+      <p style="font-size:1.02rem;color:var(--warm-gray);margin-bottom:1.2rem;">My work spans predictive modeling, deep learning for structural health monitoring, and computational models for meteoroid orbital paths — blending geology with cutting-edge machine learning to solve real-world problems.</p>
+      <p style="font-size:1.02rem;color:var(--warm-gray);">Beyond research, I've built data-science products in internships, led logistics for the EAGE Student Chapter, and launched a local tutoring startup. I bring both technical depth and entrepreneurial thinking.</p>
     </div>
-    <div class="about-highlights fade-in">
-      <div class="highlight-card"><h4>Academic Award</h4><p>Academic Excellence Award, IIT Kanpur — January 2025</p></div>
-      <div class="highlight-card"><h4>Sports Achievement</h4><p>Gold (Volleyball) &amp; Silver (Chess) — ESS Sports Meet 2025, IIT Kanpur</p></div>
-      <div class="highlight-card"><h4>Leadership</h4><p>Logistics Head, EAGE Student Chapter IIT Kanpur — Dec 2024 to Present</p></div>
-      <div class="highlight-card"><h4>Entrepreneur</h4><p>Founded a tutoring startup connecting students with qualified tutors — Aug 2023</p></div>
+    <div data-fade style="display:flex;flex-direction:column;gap:1rem;">
+      <div class="highlight-card" style="background:#fff;border:1px solid var(--line);border-left:3px solid var(--clay);border-radius:8px;padding:1rem 1.3rem;box-shadow:0 8px 24px -18px rgba(25,21,16,.5);">
+        <h4 style="font-size:.74rem;font-weight:600;color:var(--clay);text-transform:uppercase;letter-spacing:.08em;margin-bottom:.3rem;">Convocation Award</h4>
+        <p style="font-size:.92rem;color:var(--warm-gray);">Dr. Vishwanath Bajpai Award — Best Thesis &amp; Academic Excellence, 59th Convocation, IIT Kanpur</p>
+      </div>
+      <div class="highlight-card" style="background:#fff;border:1px solid var(--line);border-left:3px solid var(--clay);border-radius:8px;padding:1rem 1.3rem;box-shadow:0 8px 24px -18px rgba(25,21,16,.5);">
+        <h4 style="font-size:.74rem;font-weight:600;color:var(--clay);text-transform:uppercase;letter-spacing:.08em;margin-bottom:.3rem;">Academic Award</h4>
+        <p style="font-size:.92rem;color:var(--warm-gray);">Academic Excellence Award, IIT Kanpur — January 2025</p>
+      </div>
+      <div class="highlight-card" style="background:#fff;border:1px solid var(--line);border-left:3px solid var(--clay);border-radius:8px;padding:1rem 1.3rem;box-shadow:0 8px 24px -18px rgba(25,21,16,.5);">
+        <h4 style="font-size:.74rem;font-weight:600;color:var(--clay);text-transform:uppercase;letter-spacing:.08em;margin-bottom:.3rem;">Sports Achievement</h4>
+        <p style="font-size:.92rem;color:var(--warm-gray);">Gold (Volleyball) &amp; Silver (Chess) — ESS Sports Meet 2025, IIT Kanpur</p>
+      </div>
+      <div class="highlight-card" style="background:#fff;border:1px solid var(--line);border-left:3px solid var(--clay);border-radius:8px;padding:1rem 1.3rem;box-shadow:0 8px 24px -18px rgba(25,21,16,.5);">
+        <h4 style="font-size:.74rem;font-weight:600;color:var(--clay);text-transform:uppercase;letter-spacing:.08em;margin-bottom:.3rem;">Leadership</h4>
+        <p style="font-size:.92rem;color:var(--warm-gray);">Logistics Head, EAGE Student Chapter IIT Kanpur — Dec 2024 to present</p>
+      </div>
+      <div class="highlight-card" style="background:#fff;border:1px solid var(--line);border-left:3px solid var(--clay);border-radius:8px;padding:1rem 1.3rem;box-shadow:0 8px 24px -18px rgba(25,21,16,.5);">
+        <h4 style="font-size:.74rem;font-weight:600;color:var(--clay);text-transform:uppercase;letter-spacing:.08em;margin-bottom:.3rem;">Entrepreneur</h4>
+        <p style="font-size:.92rem;color:var(--warm-gray);">Founded a tutoring startup connecting students with qualified tutors — Aug 2023</p>
+      </div>
     </div>
   </div>
 </section>
 
 <!-- EDUCATION -->
-<section id="education">
-  <div class="section-header fade-in">
-    <p class="section-eyebrow">Academic Journey</p>
-    <h2 class="section-title">Education</h2>
-    <div class="section-rule"></div>
+<section id="education" style="padding:5.5rem 2rem;">
+  <div data-fade style="text-align:center;margin-bottom:3.5rem;">
+    <p style="font-size:.72rem;font-weight:600;letter-spacing:.22em;text-transform:uppercase;color:var(--clay);margin-bottom:.7rem;">Academic Path</p>
+    <h2 style="font-family:'Fraunces',serif;font-size:clamp(2rem,3.4vw,2.8rem);font-weight:600;letter-spacing:-.01em;">Education</h2>
+    <div style="width:52px;height:3px;background:var(--clay);margin:1.1rem auto 0;border-radius:2px;"></div>
   </div>
-  <div class="edu-grid">
-    <div class="edu-card fade-in">
-      <div class="edu-year">2024–Present</div>
-      <div><div class="edu-degree">M.Tech – Geological Technology</div><div class="edu-institute">Indian Institute of Technology, Kanpur</div></div>
-      <div class="edu-cpi">8.36</div>
+  <div style="max-width:880px;margin:0 auto;display:flex;flex-direction:column;gap:1rem;">
+    <div data-fade data-collapse style="background:#fff;border:1px solid var(--line);border-radius:12px;padding:1.5rem 2rem;display:grid;grid-template-columns:auto 1fr auto;align-items:center;gap:1.5rem;">
+      <div style="font-size:.8rem;color:var(--clay);font-weight:600;white-space:nowrap;">2024 – 2026</div>
+      <div>
+        <div style="font-weight:600;font-size:1.05rem;">M.Tech — Geological Technology</div>
+        <div style="font-size:.9rem;color:var(--warm-gray);margin-top:.15rem;">Indian Institute of Technology, Kanpur</div>
+      </div>
+      <div style="font-family:'Fraunces',serif;font-size:1.5rem;font-weight:600;color:var(--clay);">8.36</div>
     </div>
-    <div class="edu-card fade-in">
-      <div class="edu-year">2021–2023</div>
-      <div><div class="edu-degree">M.Sc – Applied Geology</div><div class="edu-institute">Aligarh Muslim University, Aligarh</div></div>
-      <div class="edu-cpi">7.4</div>
+    <div data-fade data-collapse style="background:#fff;border:1px solid var(--line);border-radius:12px;padding:1.5rem 2rem;display:grid;grid-template-columns:auto 1fr auto;align-items:center;gap:1.5rem;">
+      <div style="font-size:.8rem;color:var(--clay);font-weight:600;white-space:nowrap;">2021 – 2023</div>
+      <div>
+        <div style="font-weight:600;font-size:1.05rem;">M.Sc — Applied Geology</div>
+        <div style="font-size:.9rem;color:var(--warm-gray);margin-top:.15rem;">Aligarh Muslim University, Aligarh</div>
+      </div>
+      <div style="font-family:'Fraunces',serif;font-size:1.5rem;font-weight:600;color:var(--clay);">7.40</div>
     </div>
-    <div class="edu-card fade-in">
-      <div class="edu-year">2017–2020</div>
-      <div><div class="edu-degree">B.Sc (Hons) – Geology</div><div class="edu-institute">Aligarh Muslim University, Aligarh</div></div>
-      <div class="edu-cpi">7.04</div>
+    <div data-fade data-collapse style="background:#fff;border:1px solid var(--line);border-radius:12px;padding:1.5rem 2rem;display:grid;grid-template-columns:auto 1fr auto;align-items:center;gap:1.5rem;">
+      <div style="font-size:.8rem;color:var(--clay);font-weight:600;white-space:nowrap;">2017 – 2020</div>
+      <div>
+        <div style="font-weight:600;font-size:1.05rem;">B.Sc (Hons) — Geology</div>
+        <div style="font-size:.9rem;color:var(--warm-gray);margin-top:.15rem;">Aligarh Muslim University, Aligarh</div>
+      </div>
+      <div style="font-family:'Fraunces',serif;font-size:1.5rem;font-weight:600;color:var(--clay);">7.04</div>
     </div>
   </div>
 </section>
 
 <!-- SKILLS -->
-<section id="skills">
-  <div class="section-header fade-in">
-    <p class="section-eyebrow">What I Know</p>
-    <h2 class="section-title">Technical Skills</h2>
-    <div class="section-rule"></div>
+<section id="skills" style="padding:5.5rem 2rem;background:var(--light-clay);">
+  <div data-fade style="text-align:center;margin-bottom:3.5rem;">
+    <p style="font-size:.72rem;font-weight:600;letter-spacing:.22em;text-transform:uppercase;color:var(--clay);margin-bottom:.7rem;">What I Know</p>
+    <h2 style="font-family:'Fraunces',serif;font-size:clamp(2rem,3.4vw,2.8rem);font-weight:600;letter-spacing:-.01em;">Technical Skills</h2>
+    <div style="width:52px;height:3px;background:var(--clay);margin:1.1rem auto 0;border-radius:2px;"></div>
   </div>
-  <div class="skills-grid">
-    <div class="skill-category fade-in"><h3>Programming</h3><div class="skill-tags"><span class="tag">Python</span><span class="tag">MATLAB</span><span class="tag">SQL</span></div></div>
-    <div class="skill-category fade-in"><h3>Machine Learning</h3><div class="skill-tags"><span class="tag">Scikit-Learn</span><span class="tag">XGBoost</span><span class="tag">Random Forest</span><span class="tag">SMOTE</span><span class="tag">ARIMA</span><span class="tag">LSTM</span></div></div>
-    <div class="skill-category fade-in"><h3>Deep Learning</h3><div class="skill-tags"><span class="tag">TensorFlow</span><span class="tag">Keras</span><span class="tag">CNN</span><span class="tag">U-Net</span></div></div>
-    <div class="skill-category fade-in"><h3>Data &amp; Visualization</h3><div class="skill-tags"><span class="tag">NumPy</span><span class="tag">Pandas</span><span class="tag">Matplotlib</span><span class="tag">Seaborn</span><span class="tag">Power BI</span><span class="tag">Tableau</span></div></div>
-    <div class="skill-category fade-in"><h3>Geo Tools</h3><div class="skill-tags"><span class="tag">QGIS</span><span class="tag">GMT</span><span class="tag">Inkscape</span><span class="tag">Gravimeter</span><span class="tag">Magnetometer</span></div></div>
-    <div class="skill-category fade-in"><h3>Core Skills</h3><div class="skill-tags"><span class="tag">Data Analytics</span><span class="tag">Image Processing</span><span class="tag">Computer Vision</span><span class="tag">Statistics</span><span class="tag">MS Excel</span></div></div>
+  <div data-collapse style="max-width:1000px;margin:0 auto;display:grid;grid-template-columns:repeat(3,1fr);gap:1.4rem;">
+    <div data-fade style="background:#fff;border:1px solid var(--line);border-radius:12px;padding:1.5rem;">
+      <h3 style="font-size:.74rem;font-weight:600;color:var(--clay);text-transform:uppercase;letter-spacing:.1em;margin-bottom:1rem;padding-bottom:.75rem;border-bottom:1px solid var(--light-clay);">Programming</h3>
+      <div style="display:flex;flex-wrap:wrap;gap:.5rem;">
+        <span style="background:var(--light-clay);color:var(--dark-clay);font-size:.78rem;padding:.32rem .78rem;border-radius:100px;">Python</span>
+        <span style="background:var(--light-clay);color:var(--dark-clay);font-size:.78rem;padding:.32rem .78rem;border-radius:100px;">MATLAB</span>
+        <span style="background:var(--light-clay);color:var(--dark-clay);font-size:.78rem;padding:.32rem .78rem;border-radius:100px;">SQL</span>
+      </div>
+    </div>
+    <div data-fade style="background:#fff;border:1px solid var(--line);border-radius:12px;padding:1.5rem;">
+      <h3 style="font-size:.74rem;font-weight:600;color:var(--clay);text-transform:uppercase;letter-spacing:.1em;margin-bottom:1rem;padding-bottom:.75rem;border-bottom:1px solid var(--light-clay);">Machine Learning</h3>
+      <div style="display:flex;flex-wrap:wrap;gap:.5rem;">
+        <span style="background:var(--light-clay);color:var(--dark-clay);font-size:.78rem;padding:.32rem .78rem;border-radius:100px;">Scikit-Learn</span>
+        <span style="background:var(--light-clay);color:var(--dark-clay);font-size:.78rem;padding:.32rem .78rem;border-radius:100px;">XGBoost</span>
+        <span style="background:var(--light-clay);color:var(--dark-clay);font-size:.78rem;padding:.32rem .78rem;border-radius:100px;">Random Forest</span>
+        <span style="background:var(--light-clay);color:var(--dark-clay);font-size:.78rem;padding:.32rem .78rem;border-radius:100px;">SMOTE</span>
+        <span style="background:var(--light-clay);color:var(--dark-clay);font-size:.78rem;padding:.32rem .78rem;border-radius:100px;">ARIMA</span>
+        <span style="background:var(--light-clay);color:var(--dark-clay);font-size:.78rem;padding:.32rem .78rem;border-radius:100px;">LSTM</span>
+      </div>
+    </div>
+    <div data-fade style="background:#fff;border:1px solid var(--line);border-radius:12px;padding:1.5rem;">
+      <h3 style="font-size:.74rem;font-weight:600;color:var(--clay);text-transform:uppercase;letter-spacing:.1em;margin-bottom:1rem;padding-bottom:.75rem;border-bottom:1px solid var(--light-clay);">Deep Learning</h3>
+      <div style="display:flex;flex-wrap:wrap;gap:.5rem;">
+        <span style="background:var(--light-clay);color:var(--dark-clay);font-size:.78rem;padding:.32rem .78rem;border-radius:100px;">TensorFlow</span>
+        <span style="background:var(--light-clay);color:var(--dark-clay);font-size:.78rem;padding:.32rem .78rem;border-radius:100px;">Keras</span>
+        <span style="background:var(--light-clay);color:var(--dark-clay);font-size:.78rem;padding:.32rem .78rem;border-radius:100px;">CNN</span>
+        <span style="background:var(--light-clay);color:var(--dark-clay);font-size:.78rem;padding:.32rem .78rem;border-radius:100px;">U-Net</span>
+      </div>
+    </div>
+    <div data-fade style="background:#fff;border:1px solid var(--line);border-radius:12px;padding:1.5rem;">
+      <h3 style="font-size:.74rem;font-weight:600;color:var(--clay);text-transform:uppercase;letter-spacing:.1em;margin-bottom:1rem;padding-bottom:.75rem;border-bottom:1px solid var(--light-clay);">Data &amp; Visualization</h3>
+      <div style="display:flex;flex-wrap:wrap;gap:.5rem;">
+        <span style="background:var(--light-clay);color:var(--dark-clay);font-size:.78rem;padding:.32rem .78rem;border-radius:100px;">NumPy</span>
+        <span style="background:var(--light-clay);color:var(--dark-clay);font-size:.78rem;padding:.32rem .78rem;border-radius:100px;">Pandas</span>
+        <span style="background:var(--light-clay);color:var(--dark-clay);font-size:.78rem;padding:.32rem .78rem;border-radius:100px;">Matplotlib</span>
+        <span style="background:var(--light-clay);color:var(--dark-clay);font-size:.78rem;padding:.32rem .78rem;border-radius:100px;">Seaborn</span>
+        <span style="background:var(--light-clay);color:var(--dark-clay);font-size:.78rem;padding:.32rem .78rem;border-radius:100px;">Power BI</span>
+        <span style="background:var(--light-clay);color:var(--dark-clay);font-size:.78rem;padding:.32rem .78rem;border-radius:100px;">Tableau</span>
+      </div>
+    </div>
+    <div data-fade style="background:#fff;border:1px solid var(--line);border-radius:12px;padding:1.5rem;">
+      <h3 style="font-size:.74rem;font-weight:600;color:var(--clay);text-transform:uppercase;letter-spacing:.1em;margin-bottom:1rem;padding-bottom:.75rem;border-bottom:1px solid var(--light-clay);">Geo Tools</h3>
+      <div style="display:flex;flex-wrap:wrap;gap:.5rem;">
+        <span style="background:var(--light-clay);color:var(--dark-clay);font-size:.78rem;padding:.32rem .78rem;border-radius:100px;">Inkscape</span>
+        <span style="background:var(--light-clay);color:var(--dark-clay);font-size:.78rem;padding:.32rem .78rem;border-radius:100px;">QGIS</span>
+        <span style="background:var(--light-clay);color:var(--dark-clay);font-size:.78rem;padding:.32rem .78rem;border-radius:100px;">GMT</span>
+        <span style="background:var(--light-clay);color:var(--dark-clay);font-size:.78rem;padding:.32rem .78rem;border-radius:100px;">Gravimeter</span>
+        <span style="background:var(--light-clay);color:var(--dark-clay);font-size:.78rem;padding:.32rem .78rem;border-radius:100px;">Magnetometer</span>
+      </div>
+    </div>
+    <div data-fade style="background:#fff;border:1px solid var(--line);border-radius:12px;padding:1.5rem;">
+      <h3 style="font-size:.74rem;font-weight:600;color:var(--clay);text-transform:uppercase;letter-spacing:.1em;margin-bottom:1rem;padding-bottom:.75rem;border-bottom:1px solid var(--light-clay);">Core Skills</h3>
+      <div style="display:flex;flex-wrap:wrap;gap:.5rem;">
+        <span style="background:var(--light-clay);color:var(--dark-clay);font-size:.78rem;padding:.32rem .78rem;border-radius:100px;">Data Analytics</span>
+        <span style="background:var(--light-clay);color:var(--dark-clay);font-size:.78rem;padding:.32rem .78rem;border-radius:100px;">Image Processing</span>
+        <span style="background:var(--light-clay);color:var(--dark-clay);font-size:.78rem;padding:.32rem .78rem;border-radius:100px;">Computer Vision</span>
+        <span style="background:var(--light-clay);color:var(--dark-clay);font-size:.78rem;padding:.32rem .78rem;border-radius:100px;">Statistics</span>
+        <span style="background:var(--light-clay);color:var(--dark-clay);font-size:.78rem;padding:.32rem .78rem;border-radius:100px;">MS Excel</span>
+      </div>
+    </div>
   </div>
 </section>
 
 <!-- PROJECTS -->
-<section id="projects">
-  <div class="section-header fade-in">
-    <p class="section-eyebrow">My Work</p>
-    <h2 class="section-title">Key Projects</h2>
-    <div class="section-rule"></div>
+<section id="projects" style="padding:5.5rem 2rem;background:var(--stone);color:#fff;">
+  <div data-fade style="text-align:center;margin-bottom:3.5rem;">
+    <p style="font-size:.72rem;font-weight:600;letter-spacing:.22em;text-transform:uppercase;color:var(--clay);margin-bottom:.7rem;">My Work</p>
+    <h2 style="font-family:'Fraunces',serif;font-size:clamp(2rem,3.4vw,2.8rem);font-weight:600;letter-spacing:-.01em;color:#fff;">Key Projects</h2>
+    <div style="width:52px;height:3px;background:var(--clay);margin:1.1rem auto 0;border-radius:2px;"></div>
   </div>
-  <div class="projects-grid">
-    <div class="project-card fade-in">
-      <div class="project-number">01</div>
-      <div class="project-type">M.Tech Thesis · Ongoing</div>
-      <h3 class="project-title">Meteoroid Orbital Path Prediction via Thermoluminescence</h3>
-      <p class="project-desc">MATLAB computational model simulating thousands of meteorite orbits from thermoluminescence data, using orbital mechanics and numerical integration for best-fit trajectory determination.</p>
-      <div class="project-tags"><span class="project-tag">MATLAB</span><span class="project-tag">Orbital Mechanics</span><span class="project-tag">Thermoluminescence</span></div>
-      <a href="https://github.com/Nehalkhan" class="project-link">View on GitHub →</a>
+  <div data-collapse style="max-width:1080px;margin:0 auto;display:grid;grid-template-columns:repeat(2,1fr);gap:1.4rem;">
+    <div data-fade style="background:rgba(255,255,255,.045);border:1px solid rgba(255,255,255,.1);border-radius:14px;padding:1.8rem;position:relative;overflow:hidden;">
+      <div style="font-family:'Fraunces',serif;font-size:3.2rem;font-weight:600;color:rgba(193,127,62,.2);position:absolute;top:.4rem;right:1.1rem;">01</div>
+      <div style="font-size:.7rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--clay);margin-bottom:.75rem;">M.Tech Thesis · Best Thesis Award</div>
+      <h3 style="font-family:'Fraunces',serif;font-size:1.28rem;font-weight:600;color:#fff;margin-bottom:.75rem;line-height:1.3;">Meteoroid Orbital Path Prediction via Thermoluminescence</h3>
+      <p style="font-size:.92rem;color:rgba(255,255,255,.6);margin-bottom:1.1rem;">MATLAB computational model simulating thousands of meteorite orbits from thermoluminescence data, using orbital mechanics and numerical integration for best-fit trajectory determination.</p>
+      <div style="display:flex;flex-wrap:wrap;gap:.4rem;">
+        <span style="background:rgba(193,127,62,.16);color:var(--clay);font-size:.73rem;padding:.26rem .68rem;border-radius:4px;font-weight:500;">MATLAB</span>
+        <span style="background:rgba(193,127,62,.16);color:var(--clay);font-size:.73rem;padding:.26rem .68rem;border-radius:4px;font-weight:500;">Orbital Mechanics</span>
+        <span style="background:rgba(193,127,62,.16);color:var(--clay);font-size:.73rem;padding:.26rem .68rem;border-radius:4px;font-weight:500;">Thermoluminescence</span>
+      </div>
+      <a href="#" target="_blank" style="display:inline-block;margin-top:1.1rem;font-size:.8rem;color:var(--clay);text-decoration:none;border:1px solid rgba(193,127,62,.4);border-radius:5px;padding:.35rem .85rem;">View on GitHub →</a>
     </div>
-    <div class="project-card fade-in">
-      <div class="project-number">02</div>
-      <div class="project-type">Descon Society · IIT Kanpur</div>
-      <h3 class="project-title">Real-Time Civil Structure Defect Detection</h3>
-      <p class="project-desc">U-Net CNN system for detecting cracks and moisture in civil structures. Built MATLAB pipelines for preprocessing, augmentation, and model evaluation on annotated datasets.</p>
-      <div class="project-tags"><span class="project-tag">CNN</span><span class="project-tag">U-Net</span><span class="project-tag">MATLAB</span><span class="project-tag">Computer Vision</span></div>
-      <a href="https://github.com/Nehalkhan" class="project-link">View on GitHub →</a>
+    <div data-fade style="background:rgba(255,255,255,.045);border:1px solid rgba(255,255,255,.1);border-radius:14px;padding:1.8rem;position:relative;overflow:hidden;">
+      <div style="font-family:'Fraunces',serif;font-size:3.2rem;font-weight:600;color:rgba(193,127,62,.2);position:absolute;top:.4rem;right:1.1rem;">02</div>
+      <div style="font-size:.7rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--clay);margin-bottom:.75rem;">Descon Society · IIT Kanpur</div>
+      <h3 style="font-family:'Fraunces',serif;font-size:1.28rem;font-weight:600;color:#fff;margin-bottom:.75rem;line-height:1.3;">Real-Time Civil Structure Defect Detection</h3>
+      <p style="font-size:.92rem;color:rgba(255,255,255,.6);margin-bottom:1.1rem;">U-Net CNN system for detecting cracks and moisture in civil structures. Built MATLAB pipelines for preprocessing, augmentation, and model evaluation on annotated datasets.</p>
+      <div style="display:flex;flex-wrap:wrap;gap:.4rem;">
+        <span style="background:rgba(193,127,62,.16);color:var(--clay);font-size:.73rem;padding:.26rem .68rem;border-radius:4px;font-weight:500;">CNN</span>
+        <span style="background:rgba(193,127,62,.16);color:var(--clay);font-size:.73rem;padding:.26rem .68rem;border-radius:4px;font-weight:500;">U-Net</span>
+        <span style="background:rgba(193,127,62,.16);color:var(--clay);font-size:.73rem;padding:.26rem .68rem;border-radius:4px;font-weight:500;">MATLAB</span>
+        <span style="background:rgba(193,127,62,.16);color:var(--clay);font-size:.73rem;padding:.26rem .68rem;border-radius:4px;font-weight:500;">Computer Vision</span>
+      </div>
+      <a href="#" target="_blank" style="display:inline-block;margin-top:1.1rem;font-size:.8rem;color:var(--clay);text-decoration:none;border:1px solid rgba(193,127,62,.4);border-radius:5px;padding:.35rem .85rem;">View on GitHub →</a>
     </div>
-    <div class="project-card fade-in">
-      <div class="project-number">03</div>
-      <div class="project-type">Self Project</div>
-      <h3 class="project-title">Time Series Quantity Analysis &amp; Forecasting</h3>
-      <p class="project-desc">Applied ARIMA, SARIMA, and LSTM models for time series forecasting with feature engineering, preprocessing, and visualization for quantity-based predictive insights.</p>
-      <div class="project-tags"><span class="project-tag">ARIMA</span><span class="project-tag">LSTM</span><span class="project-tag">Python</span><span class="project-tag">Forecasting</span></div>
-      <a href="https://github.com/Nehalkhan" class="project-link">View on GitHub →</a>
+    <div data-fade style="background:rgba(255,255,255,.045);border:1px solid rgba(255,255,255,.1);border-radius:14px;padding:1.8rem;position:relative;overflow:hidden;">
+      <div style="font-family:'Fraunces',serif;font-size:3.2rem;font-weight:600;color:rgba(193,127,62,.2);position:absolute;top:.4rem;right:1.1rem;">03</div>
+      <div style="font-size:.7rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--clay);margin-bottom:.75rem;">Self Project</div>
+      <h3 style="font-family:'Fraunces',serif;font-size:1.28rem;font-weight:600;color:#fff;margin-bottom:.75rem;line-height:1.3;">Time Series Quantity Analysis &amp; Forecasting</h3>
+      <p style="font-size:.92rem;color:rgba(255,255,255,.6);margin-bottom:1.1rem;">Applied ARIMA, SARIMA, and LSTM models for time-series forecasting with feature engineering, preprocessing, and visualization for quantity-based predictive insights.</p>
+      <div style="display:flex;flex-wrap:wrap;gap:.4rem;">
+        <span style="background:rgba(193,127,62,.16);color:var(--clay);font-size:.73rem;padding:.26rem .68rem;border-radius:4px;font-weight:500;">ARIMA</span>
+        <span style="background:rgba(193,127,62,.16);color:var(--clay);font-size:.73rem;padding:.26rem .68rem;border-radius:4px;font-weight:500;">LSTM</span>
+        <span style="background:rgba(193,127,62,.16);color:var(--clay);font-size:.73rem;padding:.26rem .68rem;border-radius:4px;font-weight:500;">Python</span>
+        <span style="background:rgba(193,127,62,.16);color:var(--clay);font-size:.73rem;padding:.26rem .68rem;border-radius:4px;font-weight:500;">Forecasting</span>
+      </div>
+      <a href="#" target="_blank" style="display:inline-block;margin-top:1.1rem;font-size:.8rem;color:var(--clay);text-decoration:none;border:1px solid rgba(193,127,62,.4);border-radius:5px;padding:.35rem .85rem;">View on GitHub →</a>
     </div>
-    <div class="project-card fade-in">
-      <div class="project-number">04</div>
-      <div class="project-type">Self Project</div>
-      <h3 class="project-title">Hotel Reservation Analysis with SQL</h3>
-      <p class="project-desc">Analyzed hotel reservation data using SQL to extract guest behavior insights and booking trends. Developed data-driven recommendations to improve operational efficiency.</p>
-      <div class="project-tags"><span class="project-tag">SQL</span><span class="project-tag">Data Analysis</span><span class="project-tag">Business Intelligence</span></div>
-      <a href="https://github.com/Nehalkhan" class="project-link">View on GitHub →</a>
+    <div data-fade style="background:rgba(255,255,255,.045);border:1px solid rgba(255,255,255,.1);border-radius:14px;padding:1.8rem;position:relative;overflow:hidden;">
+      <div style="font-family:'Fraunces',serif;font-size:3.2rem;font-weight:600;color:rgba(193,127,62,.2);position:absolute;top:.4rem;right:1.1rem;">04</div>
+      <div style="font-size:.7rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--clay);margin-bottom:.75rem;">Self Project</div>
+      <h3 style="font-family:'Fraunces',serif;font-size:1.28rem;font-weight:600;color:#fff;margin-bottom:.75rem;line-height:1.3;">Hotel Reservation Analysis with SQL</h3>
+      <p style="font-size:.92rem;color:rgba(255,255,255,.6);margin-bottom:1.1rem;">Analyzed hotel reservation data using SQL to extract guest-behavior insights and booking trends. Developed data-driven recommendations to improve operational efficiency.</p>
+      <div style="display:flex;flex-wrap:wrap;gap:.4rem;">
+        <span style="background:rgba(193,127,62,.16);color:var(--clay);font-size:.73rem;padding:.26rem .68rem;border-radius:4px;font-weight:500;">SQL</span>
+        <span style="background:rgba(193,127,62,.16);color:var(--clay);font-size:.73rem;padding:.26rem .68rem;border-radius:4px;font-weight:500;">Data Analysis</span>
+        <span style="background:rgba(193,127,62,.16);color:var(--clay);font-size:.73rem;padding:.26rem .68rem;border-radius:4px;font-weight:500;">Business Intelligence</span>
+      </div>
+      <a href="#" target="_blank" style="display:inline-block;margin-top:1.1rem;font-size:.8rem;color:var(--clay);text-decoration:none;border:1px solid rgba(193,127,62,.4);border-radius:5px;padding:.35rem .85rem;">View on GitHub →</a>
     </div>
   </div>
 </section>
 
 <!-- GALLERY -->
-<section id="gallery">
-  <div class="section-header fade-in">
-    <p class="section-eyebrow">Field Work &amp; Campus Life</p>
-    <h2 class="section-title">Photo Gallery</h2>
-    <div class="section-rule"></div>
+<section id="gallery" style="padding:5.5rem 2rem;">
+  <div data-fade style="text-align:center;margin-bottom:1.6rem;">
+    <p style="font-size:.72rem;font-weight:600;letter-spacing:.22em;text-transform:uppercase;color:var(--clay);margin-bottom:.7rem;">Field Work &amp; Campus Life</p>
+    <h2 style="font-family:'Fraunces',serif;font-size:clamp(2rem,3.4vw,2.8rem);font-weight:600;letter-spacing:-.01em;">Photo Gallery</h2>
+    <div style="width:52px;height:3px;background:var(--clay);margin:1.1rem auto 0;border-radius:2px;"></div>
   </div>
-  <p class="gallery-intro fade-in">From the Kumaon Himalayas to Rajasthan's ancient terrains — snapshots from geological fieldwork, lab sessions, and life at IIT Kanpur.</p>
-  <div class="gallery-tabs fade-in">
-    <button class="gallery-tab active" onclick="filterGallery('all',this)">All Photos</button>
-    <button class="gallery-tab" onclick="filterGallery('field',this)">Field Work</button>
-    <button class="gallery-tab" onclick="filterGallery('lab',this)">Lab &amp; Research</button>
-    <button class="gallery-tab" onclick="filterGallery('campus',this)">Campus Life</button>
+  <p data-fade style="max-width:640px;margin:0 auto 2rem;text-align:center;font-size:.96rem;color:var(--warm-gray);">From the Kumaon Himalayas to Rajasthan's ancient terrains — snapshots from geological fieldwork, lab sessions, and life at IIT Kanpur.</p>
+
+  <div style="display:flex;justify-content:center;gap:.7rem;margin-bottom:2.4rem;flex-wrap:wrap;">
+    <button data-tab="all" onclick="filterGallery(this)" style="padding:.5rem 1.4rem;border:1.5px solid var(--clay);border-radius:100px;font-size:.82rem;font-weight:600;color:#fff;cursor:pointer;background:var(--clay);font-family:inherit;transition:all .2s;">All Photos</button>
+    <button data-tab="field" onclick="filterGallery(this)" style="padding:.5rem 1.4rem;border:1.5px solid rgba(193,127,62,.35);border-radius:100px;font-size:.82rem;font-weight:600;color:var(--warm-gray);cursor:pointer;background:transparent;font-family:inherit;transition:all .2s;">Field Work</button>
+    <button data-tab="lab" onclick="filterGallery(this)" style="padding:.5rem 1.4rem;border:1.5px solid rgba(193,127,62,.35);border-radius:100px;font-size:.82rem;font-weight:600;color:var(--warm-gray);cursor:pointer;background:transparent;font-family:inherit;transition:all .2s;">Lab &amp; Research</button>
+    <button data-tab="campus" onclick="filterGallery(this)" style="padding:.5rem 1.4rem;border:1.5px solid rgba(193,127,62,.35);border-radius:100px;font-size:.82rem;font-weight:600;color:var(--warm-gray);cursor:pointer;background:transparent;font-family:inherit;transition:all .2s;">Campus Life</button>
   </div>
-  <div class="gallery-grid" id="galleryGrid">
-    <div class="gallery-slot" data-cat="field">
-      <img src="himalaya1.jpg" alt="Kumaon Himalaya field excursion May 2022" loading="lazy" width="400" height="300">
-      <div class="slot-icon">🏔</div>
-      <div class="slot-label">Kumaon Himalaya trip</div>
-      <div class="slot-caption">Kumaon Himalaya – Nainital, Bhimtal, May 2022</div>
+
+  <div id="gallery-grid" style="max-width:1080px;margin:0 auto;display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;" data-collapse>
+    <div data-slot="field" style="aspect-ratio:4/3;border-radius:12px;overflow:hidden;position:relative;background:var(--light-clay);border:1.5px dashed rgba(193,127,62,.35);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:.5rem;transition:transform .2s;">
+      <div class="ph-fallback" style="display:flex;flex-direction:column;align-items:center;gap:.5rem;">
+        <div style="font-size:1.9rem;">🏔</div>
+      </div>
+      <img src="himalaya1.jpg" alt="Kumaon Himalaya – Nainital, Bhimtal · May 2022" onerror="this.style.display='none'" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;">
+      <div style="position:absolute;bottom:0;left:0;right:0;background:linear-gradient(transparent,rgba(25,21,16,.88));color:#fff;font-size:.78rem;padding:2rem .8rem .65rem;">Kumaon Himalaya – Nainital, Bhimtal · May 2022</div>
     </div>
-    <div class="gallery-slot" data-cat="field">
-      <img src="bayana.jpg" alt="Bayana Rajasthan geological field trip Jan 2023" loading="lazy" width="400" height="300">
-      <div class="slot-icon">🪨</div>
-      <div class="slot-label">Bayana, Rajasthan trip</div>
-      <div class="slot-caption">Bayana Region, Rajasthan – Jan 2023</div>
+    <div data-slot="field" style="aspect-ratio:4/3;border-radius:12px;overflow:hidden;position:relative;background:var(--light-clay);border:1.5px dashed rgba(193,127,62,.35);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:.5rem;transition:transform .2s;">
+      <div class="ph-fallback" style="display:flex;flex-direction:column;align-items:center;gap:.5rem;">
+        <div style="font-size:1.9rem;">🪨</div>
+      </div>
+      <img src="bayana.jpg" alt="Bayana Region, Rajasthan · Jan 2023" onerror="this.style.display='none'" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;">
+      <div style="position:absolute;bottom:0;left:0;right:0;background:linear-gradient(transparent,rgba(25,21,16,.88));color:#fff;font-size:.78rem;padding:2rem .8rem .65rem;">Bayana Region, Rajasthan · Jan 2023</div>
     </div>
-    <div class="gallery-slot" data-cat="field">
-      <img src="chittorgarh.jpg" alt="Chittorgarh Rajasthan geological field trip Jan 2019" loading="lazy" width="400" height="300">
-      <div class="slot-icon">🗺</div>
-      <div class="slot-label">Chittorgarh trip</div>
-      <div class="slot-caption">Chittorgarh, Rajasthan – Jan 2019</div>
+    <div data-slot="field" style="aspect-ratio:4/3;border-radius:12px;overflow:hidden;position:relative;background:var(--light-clay);border:1.5px dashed rgba(193,127,62,.35);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:.5rem;transition:transform .2s;">
+      <div class="ph-fallback" style="display:flex;flex-direction:column;align-items:center;gap:.5rem;">
+        <div style="font-size:1.9rem;">🗺</div>
+      </div>
+      <img src="chittorgarh.jpg" alt="Chittorgarh, Rajasthan · Jan 2019" onerror="this.style.display='none'" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;">
+      <div style="position:absolute;bottom:0;left:0;right:0;background:linear-gradient(transparent,rgba(25,21,16,.88));color:#fff;font-size:.78rem;padding:2rem .8rem .65rem;">Chittorgarh, Rajasthan · Jan 2019</div>
     </div>
-    <div class="gallery-slot" data-cat="campus">
-      <img src="amu.png" alt="Aligarh Muslim University campus" loading="lazy" width="400" height="300">
-      <div class="slot-icon">📍</div>
-      <div class="slot-label">AMU Campus</div>
-      <div class="slot-caption">AMU Campus</div>
+    <div data-slot="campus" style="aspect-ratio:4/3;border-radius:12px;overflow:hidden;position:relative;background:var(--light-clay);border:1.5px dashed rgba(193,127,62,.35);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:.5rem;transition:transform .2s;">
+      <div class="ph-fallback" style="display:flex;flex-direction:column;align-items:center;gap:.5rem;">
+        <div style="font-size:1.9rem;">📍</div>
+      </div>
+      <img src="amu.png" alt="AMU Campus, Aligarh" onerror="this.style.display='none'" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;">
+      <div style="position:absolute;bottom:0;left:0;right:0;background:linear-gradient(transparent,rgba(25,21,16,.88));color:#fff;font-size:.78rem;padding:2rem .8rem .65rem;">AMU Campus, Aligarh</div>
     </div>
-    <div class="gallery-slot" data-cat="lab">
-      <img src="microscope.png" alt="Petrological microscope lab IIT Kanpur" loading="lazy" width="400" height="300">
-      <div class="slot-icon">🔬</div>
-      <div class="slot-label">Petrological microscope</div>
-      <div class="slot-caption">Petrological Microscope Lab – IIT Kanpur</div>
+    <div data-slot="lab" style="aspect-ratio:4/3;border-radius:12px;overflow:hidden;position:relative;background:var(--light-clay);border:1.5px dashed rgba(193,127,62,.35);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:.5rem;transition:transform .2s;">
+      <div class="ph-fallback" style="display:flex;flex-direction:column;align-items:center;gap:.5rem;">
+        <div style="font-size:1.9rem;">🔬</div>
+      </div>
+      <img src="microscope.png" alt="Petrological Microscope Lab – IIT Kanpur" onerror="this.style.display='none'" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;">
+      <div style="position:absolute;bottom:0;left:0;right:0;background:linear-gradient(transparent,rgba(25,21,16,.88));color:#fff;font-size:.78rem;padding:2rem .8rem .65rem;">Petrological Microscope Lab – IIT Kanpur</div>
     </div>
-    <div class="gallery-slot" data-cat="lab">
-      <img src="coding.png" alt="Research and data science coding setup" loading="lazy" width="400" height="300">
-      <div class="slot-icon">💻</div>
-      <div class="slot-label">Research / coding setup</div>
-      <div class="slot-caption">Research &amp; Data Science Work</div>
+    <div data-slot="lab" style="aspect-ratio:4/3;border-radius:12px;overflow:hidden;position:relative;background:var(--light-clay);border:1.5px dashed rgba(193,127,62,.35);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:.5rem;transition:transform .2s;">
+      <div class="ph-fallback" style="display:flex;flex-direction:column;align-items:center;gap:.5rem;">
+        <div style="font-size:1.9rem;">💻</div>
+      </div>
+      <img src="coding.png" alt="Research &amp; Data Science Work" onerror="this.style.display='none'" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;">
+      <div style="position:absolute;bottom:0;left:0;right:0;background:linear-gradient(transparent,rgba(25,21,16,.88));color:#fff;font-size:.78rem;padding:2rem .8rem .65rem;">Research &amp; Data Science Work</div>
     </div>
-    <div class="gallery-slot" data-cat="campus">
-      <img src="volleyball.png" alt="Gold medal volleyball ESS Sports Meet 2025 IIT Kanpur" loading="lazy" width="400" height="300">
-      <div class="slot-icon">🏆</div>
-      <div class="slot-label">Gold medal – Volleyball ESS 2025</div>
-      <div class="slot-caption">Gold Medal – Volleyball, ESS Sports Meet 2025</div>
+    <div data-slot="campus" style="aspect-ratio:4/3;border-radius:12px;overflow:hidden;position:relative;background:var(--light-clay);border:1.5px dashed rgba(193,127,62,.35);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:.5rem;transition:transform .2s;">
+      <div class="ph-fallback" style="display:flex;flex-direction:column;align-items:center;gap:.5rem;">
+        <div style="font-size:1.9rem;">🥇</div>
+      </div>
+      <img src="bajpai-medal.jpg" alt="Dr. Vishwanath Bajpai Award — 59th Convocation, IIT Kanpur" onerror="this.style.display='none'" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;">
+      <div style="position:absolute;bottom:0;left:0;right:0;background:linear-gradient(transparent,rgba(25,21,16,.88));color:#fff;font-size:.78rem;padding:2rem .8rem .65rem;">Dr. Vishwanath Bajpai Award — 59th Convocation, IIT Kanpur</div>
     </div>
-    <div class="gallery-slot" data-cat="campus">
-      <img src="chess.jpg" alt="Silver medal chess ESS Sports Meet 2025 IIT Kanpur" loading="lazy" width="400" height="300">
-      <div class="slot-icon">♟</div>
-      <div class="slot-label">Silver medal – Chess ESS 2025</div>
-      <div class="slot-caption">Silver Medal – Chess, ESS Sports Meet 2025</div>
+    <div data-slot="campus" style="aspect-ratio:4/3;border-radius:12px;overflow:hidden;position:relative;background:var(--light-clay);border:1.5px dashed rgba(193,127,62,.35);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:.5rem;transition:transform .2s;">
+      <div class="ph-fallback" style="display:flex;flex-direction:column;align-items:center;gap:.5rem;">
+        <div style="font-size:1.9rem;">🏆</div>
+      </div>
+      <img src="volleyball.png" alt="Gold Medal – Volleyball, ESS Sports Meet 2025" onerror="this.style.display='none'" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;">
+      <div style="position:absolute;bottom:0;left:0;right:0;background:linear-gradient(transparent,rgba(25,21,16,.88));color:#fff;font-size:.78rem;padding:2rem .8rem .65rem;">Gold Medal – Volleyball, ESS Sports Meet 2025</div>
     </div>
-    <div class="gallery-slot" data-cat="campus">
-      <img src="campus.jpg" alt="IIT Kanpur campus life" loading="lazy" width="400" height="300">
-      <div class="slot-icon">🎓</div>
-      <div class="slot-label">IIT Kanpur campus</div>
-      <div class="slot-caption">Life at IIT Kanpur</div>
+    <div data-slot="campus" style="aspect-ratio:4/3;border-radius:12px;overflow:hidden;position:relative;background:var(--light-clay);border:1.5px dashed rgba(193,127,62,.35);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:.5rem;transition:transform .2s;">
+      <div class="ph-fallback" style="display:flex;flex-direction:column;align-items:center;gap:.5rem;">
+        <div style="font-size:1.9rem;">♟</div>
+      </div>
+      <img src="chess.jpg" alt="Silver Medal – Chess, ESS Sports Meet 2025" onerror="this.style.display='none'" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;">
+      <div style="position:absolute;bottom:0;left:0;right:0;background:linear-gradient(transparent,rgba(25,21,16,.88));color:#fff;font-size:.78rem;padding:2rem .8rem .65rem;">Silver Medal – Chess, ESS Sports Meet 2025</div>
+    </div>
+    <div data-slot="campus" style="aspect-ratio:4/3;border-radius:12px;overflow:hidden;position:relative;background:var(--light-clay);border:1.5px dashed rgba(193,127,62,.35);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:.5rem;transition:transform .2s;">
+      <div class="ph-fallback" style="display:flex;flex-direction:column;align-items:center;gap:.5rem;">
+        <div style="font-size:1.9rem;">🎓</div>
+      </div>
+      <img src="campus.jpg" alt="Life at IIT Kanpur" onerror="this.style.display='none'" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;">
+      <div style="position:absolute;bottom:0;left:0;right:0;background:linear-gradient(transparent,rgba(25,21,16,.88));color:#fff;font-size:.78rem;padding:2rem .8rem .65rem;">Life at IIT Kanpur</div>
+    </div>
+  </div>
+</section>
+
+<!-- ACHIEVEMENTS -->
+<section id="achievements" style="padding:5.5rem 2rem;background:var(--light-clay);">
+  <div data-fade style="text-align:center;margin-bottom:3.5rem;">
+    <p style="font-size:.72rem;font-weight:600;letter-spacing:.22em;text-transform:uppercase;color:var(--clay);margin-bottom:.7rem;">Honors &amp; Awards</p>
+    <h2 style="font-family:'Fraunces',serif;font-size:clamp(2rem,3.4vw,2.8rem);font-weight:600;letter-spacing:-.01em;">Achievements</h2>
+    <div style="width:52px;height:3px;background:var(--clay);margin:1.1rem auto 0;border-radius:2px;"></div>
+  </div>
+  <div data-collapse style="max-width:1000px;margin:0 auto;display:grid;grid-template-columns:repeat(3,1fr);gap:1.4rem;">
+
+    <div data-fade style="background:#fff;border:1px solid var(--line);border-radius:14px;overflow:hidden;text-align:center;box-shadow:0 8px 24px -18px rgba(25,21,16,.5);">
+      <div style="aspect-ratio:4/3;position:relative;background:var(--light-clay);border-bottom:1.5px dashed rgba(193,127,62,.35);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:.5rem;">
+        <div class="ph-fallback" style="display:flex;flex-direction:column;align-items:center;gap:.5rem;">
+          <div style="font-size:1.9rem;">🥇</div>
+        </div>
+        <img src="achievements/gold-medal.jpg" alt="Dr. Vishwanath Bajpai Award — 59th Convocation, IIT Kanpur" onerror="this.style.display='none'" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;">
+      </div>
+      <div style="padding:1.4rem 1.5rem;">
+        <h3 style="font-family:'Fraunces',serif;font-size:1.1rem;font-weight:600;line-height:1.35;margin-bottom:.5rem;">Dr. Vishwanath Bajpai Award</h3>
+        <p style="font-size:.88rem;color:var(--warm-gray);margin-bottom:.7rem;">Awarded for the best thesis and academic excellence — 59th Convocation, IIT Kanpur.</p>
+        <span style="display:inline-block;background:var(--light-clay);color:var(--dark-clay);font-size:.75rem;font-weight:600;padding:.3rem .85rem;border-radius:100px;">IIT Kanpur · 2026</span>
+      </div>
+    </div>
+
+    <div data-fade style="background:#fff;border:1px solid var(--line);border-radius:14px;overflow:hidden;text-align:center;box-shadow:0 8px 24px -18px rgba(25,21,16,.5);">
+      <div style="aspect-ratio:4/3;position:relative;background:var(--light-clay);border-bottom:1.5px dashed rgba(193,127,62,.35);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:.5rem;">
+        <div class="ph-fallback" style="display:flex;flex-direction:column;align-items:center;gap:.5rem;">
+          <div style="font-size:1.9rem;">🏆</div>
+        </div>
+        <img src="achievements/academic-excellence.jpg" alt="Academic Excellence Award" onerror="this.style.display='none'" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;">
+      </div>
+      <div style="padding:1.4rem 1.5rem;">
+        <h3 style="font-family:'Fraunces',serif;font-size:1.1rem;font-weight:600;line-height:1.35;margin-bottom:.5rem;">Academic Excellence Award</h3>
+        <p style="font-size:.88rem;color:var(--warm-gray);margin-bottom:.7rem;">Recognized for outstanding academic performance at IIT Kanpur.</p>
+        <span style="display:inline-block;background:var(--light-clay);color:var(--dark-clay);font-size:.75rem;font-weight:600;padding:.3rem .85rem;border-radius:100px;">Jan 2025</span>
+      </div>
+    </div>
+
+    <div data-fade style="background:#fff;border:1px solid var(--line);border-radius:14px;overflow:hidden;text-align:center;box-shadow:0 8px 24px -18px rgba(25,21,16,.5);">
+      <div style="aspect-ratio:4/3;position:relative;background:var(--light-clay);border-bottom:1.5px dashed rgba(193,127,62,.35);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:.5rem;">
+        <div class="ph-fallback" style="display:flex;flex-direction:column;align-items:center;gap:.5rem;">
+          <div style="font-size:1.9rem;">🏐</div>
+        </div>
+        <img src="achievements/ess-sports.jpg" alt="ESS Sports Meet 2025" onerror="this.style.display='none'" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;">
+      </div>
+      <div style="padding:1.4rem 1.5rem;">
+        <h3 style="font-family:'Fraunces',serif;font-size:1.1rem;font-weight:600;line-height:1.35;margin-bottom:.5rem;">ESS Sports Meet 2025</h3>
+        <p style="font-size:.88rem;color:var(--warm-gray);margin-bottom:.7rem;">1st place in Volleyball (Gold) and 2nd place in Chess (Silver) — Earth Science Society, IIT Kanpur.</p>
+        <span style="display:inline-block;background:var(--light-clay);color:var(--dark-clay);font-size:.75rem;font-weight:600;padding:.3rem .85rem;border-radius:100px;">2025</span>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- CERTIFICATES -->
+<section id="certificates" style="padding:5.5rem 2rem;">
+  <div data-fade style="text-align:center;margin-bottom:1.6rem;">
+    <p style="font-size:.72rem;font-weight:600;letter-spacing:.22em;text-transform:uppercase;color:var(--clay);margin-bottom:.7rem;">Recognitions Along the Way</p>
+    <h2 style="font-family:'Fraunces',serif;font-size:clamp(2rem,3.4vw,2.8rem);font-weight:600;letter-spacing:-.01em;">Certificates</h2>
+    <div style="width:52px;height:3px;background:var(--clay);margin:1.1rem auto 0;border-radius:2px;"></div>
+  </div>
+  <p data-fade style="max-width:640px;margin:0 auto 2.6rem;text-align:center;font-size:.96rem;color:var(--warm-gray);">Courses, workshops, and credentials earned across my academic and professional career.</p>
+  <div style="overflow:hidden;-webkit-mask-image:linear-gradient(90deg,transparent,#000 6%,#000 94%,transparent);mask-image:linear-gradient(90deg,transparent,#000 6%,#000 94%,transparent);">
+    <div data-marquee id="cert-track" style="display:flex;gap:1.4rem;width:max-content;animation:certScroll 70s linear infinite;">
+      <!-- populated by JS: doubled cert list for seamless loop -->
     </div>
   </div>
 </section>
 
 <!-- EXPERIENCE -->
-<section id="experience">
-  <div class="section-header fade-in">
-    <p class="section-eyebrow">Industry Experience</p>
-    <h2 class="section-title">Internship</h2>
-    <div class="section-rule"></div>
+<section id="experience" style="padding:5.5rem 2rem;background:var(--light-clay);">
+  <div data-fade style="text-align:center;margin-bottom:3.5rem;">
+    <p style="font-size:.72rem;font-weight:600;letter-spacing:.22em;text-transform:uppercase;color:var(--clay);margin-bottom:.7rem;">Industry Experience</p>
+    <h2 style="font-family:'Fraunces',serif;font-size:clamp(2rem,3.4vw,2.8rem);font-weight:600;letter-spacing:-.01em;">Internship</h2>
+    <div style="width:52px;height:3px;background:var(--clay);margin:1.1rem auto 0;border-radius:2px;"></div>
   </div>
-  <div class="exp-container">
-    <div class="exp-card fade-in">
-      <div class="exp-header">
-        <div>
-          <div class="exp-role">Data Science Intern</div>
-          <div class="exp-company">Edgenius Skillfied Mentor Private Limited</div>
-        </div>
-        <span class="exp-duration">Jun 2025 – Aug 2025</span>
+  <div data-fade style="max-width:820px;margin:0 auto;background:#fff;border:1px solid var(--line);border-radius:14px;padding:2rem;">
+    <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:1.2rem;flex-wrap:wrap;gap:.6rem;">
+      <div>
+        <div style="font-weight:600;font-size:1.15rem;">Data Science Intern</div>
+        <div style="font-size:.9rem;color:var(--warm-gray);margin-top:.15rem;">Edgenius Skillfied Mentor Private Limited</div>
       </div>
-      <ul class="exp-points">
-        <li>Built predictive regression models (Linear Regression, Random Forest, XGBoost) for temperature estimation from humidity data using EDA, feature engineering, and hyperparameter tuning.</li>
-        <li>Engineered a fraud detection engine using ML classification with SMOTE for imbalanced data. Benchmarked models using ROC-AUC, Precision, Recall, and F1-score.</li>
-        <li>Delivered end-to-end ML pipelines in Python — preprocessing, visualization, and model evaluation.</li>
-      </ul>
+      <span style="background:var(--light-clay);color:var(--dark-clay);font-size:.78rem;padding:.35rem .85rem;border-radius:100px;white-space:nowrap;">Jun 2025 – Aug 2025</span>
     </div>
+    <ul style="list-style:none;">
+      <li style="font-size:.94rem;color:var(--warm-gray);padding:.6rem 0 .6rem 1.3rem;border-bottom:1px solid var(--light-clay);position:relative;">
+        <span style="position:absolute;left:0;color:var(--clay);">—</span>Built predictive regression models (Linear Regression, Random Forest, XGBoost) for temperature estimation from humidity data using EDA, feature engineering, and hyperparameter tuning.
+      </li>
+      <li style="font-size:.94rem;color:var(--warm-gray);padding:.6rem 0 .6rem 1.3rem;border-bottom:1px solid var(--light-clay);position:relative;">
+        <span style="position:absolute;left:0;color:var(--clay);">—</span>Engineered a fraud-detection engine using ML classification with SMOTE for imbalanced data. Benchmarked models using ROC-AUC, Precision, Recall, and F1-score.
+      </li>
+      <li style="font-size:.94rem;color:var(--warm-gray);padding:.6rem 0 .6rem 1.3rem;border-bottom:1px solid var(--light-clay);position:relative;">
+        <span style="position:absolute;left:0;color:var(--clay);">—</span>Delivered end-to-end ML pipelines in Python — preprocessing, visualization, and model evaluation.
+      </li>
+    </ul>
   </div>
 </section>
 
 <!-- CONTACT -->
-<section id="contact">
-  <div class="contact-inner">
-    <div class="section-header fade-in">
-      <p class="section-eyebrow">Let's Connect</p>
-      <h2 class="section-title">Get In Touch</h2>
-      <div class="section-rule"></div>
-    </div>
-    <p class="contact-intro fade-in">Open to research collaborations, data science roles, and interesting projects. Feel free to reach out anytime.</p>
-    <div class="contact-links fade-in">
-      <a href="mailto:nehalkhanamu@gmail.com" class="contact-link">✉ nehalkhanamu@gmail.com</a>
-      <a href="tel:+918791455561" class="contact-link">☎ +91 8791455561</a>
-      <a href="https://linkedin.com/in/khannehal" target="_blank" rel="noopener" class="contact-link">in LinkedIn</a>
-      <a href="https://github.com/Nehalkhan" target="_blank" rel="noopener" class="contact-link">⌥ GitHub</a>
+<section id="contact" style="padding:5.5rem 2rem;background:var(--stone);text-align:center;">
+  <div data-fade style="max-width:620px;margin:0 auto;">
+    <p style="font-size:.72rem;font-weight:600;letter-spacing:.22em;text-transform:uppercase;color:var(--clay);margin-bottom:.7rem;">Let's Connect</p>
+    <h2 style="font-family:'Fraunces',serif;font-size:clamp(2rem,3.4vw,2.8rem);font-weight:600;letter-spacing:-.01em;color:#fff;">Get In Touch</h2>
+    <div style="width:52px;height:3px;background:var(--clay);margin:1.1rem auto 1.8rem;border-radius:2px;"></div>
+    <p style="font-size:1.02rem;color:rgba(255,255,255,.6);margin-bottom:2.4rem;">Open to research collaborations, data-science roles, and interesting projects. Feel free to reach out anytime.</p>
+    <div style="display:flex;justify-content:center;gap:.9rem;flex-wrap:wrap;">
+      <a href="mailto:nehalkhanamu@gmail.com" style="display:flex;align-items:center;gap:.5rem;text-decoration:none;color:#fff;font-size:.92rem;font-weight:500;padding:.75rem 1.4rem;background:rgba(255,255,255,.06);border-radius:8px;border:1px solid rgba(255,255,255,.12);">✉ nehalkhanamu@gmail.com</a>
+      <a href="tel:+918791455561" style="display:flex;align-items:center;gap:.5rem;text-decoration:none;color:#fff;font-size:.92rem;font-weight:500;padding:.75rem 1.4rem;background:rgba(255,255,255,.06);border-radius:8px;border:1px solid rgba(255,255,255,.12);">☎ +91 87914 55561</a>
+      <a href="https://linkedin.com/in/khannehal" target="_blank" style="display:flex;align-items:center;gap:.5rem;text-decoration:none;color:#fff;font-size:.92rem;font-weight:500;padding:.75rem 1.4rem;background:rgba(255,255,255,.06);border-radius:8px;border:1px solid rgba(255,255,255,.12);">in · LinkedIn</a>
+      <a href="https://github.com/Nehalkhan" target="_blank" style="display:flex;align-items:center;gap:.5rem;text-decoration:none;color:#fff;font-size:.92rem;font-weight:500;padding:.75rem 1.4rem;background:rgba(255,255,255,.06);border-radius:8px;border:1px solid rgba(255,255,255,.12);">⌥ GitHub</a>
     </div>
   </div>
 </section>
 
-<footer>© 2026 Nehal Khan · IIT Kanpur · nehalkhanamu@gmail.com</footer>
+<footer style="background:#120f0b;text-align:center;padding:2rem;color:rgba(255,255,255,.28);font-size:.8rem;letter-spacing:.04em;">© 2025 Nehal Khan · IIT Kanpur · Geological Technology &amp; Data Science</footer>
 
 <script>
-  // Scroll animations
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach((entry, i) => {
-      if (entry.isIntersecting) setTimeout(() => entry.target.classList.add('visible'), i * 80);
-    });
-  }, { threshold: 0.1 });
-  document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
-
   // Gallery filter
-  function filterGallery(cat, btn) {
-    document.querySelectorAll('.gallery-tab').forEach(t => t.classList.remove('active'));
-    btn.classList.add('active');
-    document.querySelectorAll('.gallery-slot').forEach(slot => {
-      slot.style.display = (cat === 'all' || slot.dataset.cat === cat) ? '' : 'none';
+  function filterGallery(btn) {
+    const cat = btn.getAttribute('data-tab');
+    document.querySelectorAll('[data-tab]').forEach(b => {
+      const on = b === btn;
+      b.style.background = on ? 'var(--clay)' : 'transparent';
+      b.style.color = on ? '#fff' : 'var(--warm-gray)';
+      b.style.borderColor = on ? 'var(--clay)' : 'rgba(193,127,62,.35)';
+    });
+    document.querySelectorAll('[data-slot]').forEach(s => {
+      s.style.display = (cat === 'all' || s.getAttribute('data-slot') === cat) ? '' : 'none';
     });
   }
 
-  // Hide placeholder icons when real image loads
-  document.querySelectorAll('.gallery-slot img').forEach(img => {
-    img.onload = () => {
-      const icon = img.parentElement.querySelector('.slot-icon');
-      const label = img.parentElement.querySelector('.slot-label');
-      if (icon) icon.style.display = 'none';
-      if (label) label.style.display = 'none';
-    };
-    if (img.complete && img.naturalWidth > 0) img.onload();
+  // Certificates data
+  const certificates = [
+    { file: 'certs/gold-medal.jpg',   img: 'certs/gold-medal.jpg',   icon: '🥇', kind: 'photo', title: 'Dr. Vishwanath Bajpai Award — Best Thesis & Academic Excellence', issuer: '59th Convocation, IIT Kanpur', date: '2026' },
+    { file: 'certs/academic-excellence.jpg', img: 'certs/academic-excellence.jpg', icon: '🏆', kind: 'photo', title: 'Academic Excellence Award', issuer: 'IIT Kanpur', date: 'Jan 2025' },
+    { file: 'certs/internship.pdf',   img: 'certs/internship.png',   icon: '📄', kind: 'PDF', title: 'Data Science Internship', issuer: 'Edgenius Skillfied Mentor Pvt Ltd', date: 'Aug 2025' },
+    { file: 'certs/powerbi.pdf',      img: 'certs/powerbi.png',      icon: '📄', kind: 'PDF', title: 'Power BI Workshop', issuer: 'OfficeMaster', date: 'Aug 2025' },
+    { file: 'certs/matlab-onramp.pdf', img: 'certs/matlab-onramp.png', icon: '📄', kind: 'PDF', title: 'MATLAB Onramp', issuer: 'MathWorks', date: 'May 2025' },
+    { file: 'certs/matlab-image-processing.pdf', img: 'certs/matlab-image-processing.png', icon: '📄', kind: 'PDF', title: 'Image Processing Onramp', issuer: 'MathWorks', date: 'Sep 2025' },
+    { file: 'certs/matlab-expo.pdf',  img: 'certs/matlab-expo.png',  icon: '📄', kind: 'PDF', title: 'MATLAB Expo 2025', issuer: 'MathWorks', date: 'Nov 2025' },
+    { file: 'certs/ibm-sql-python.pdf', img: 'certs/ibm-sql-python.png', icon: '📄', kind: 'PDF', title: 'Databases and SQL for Data Science with Python', issuer: 'IBM · Coursera', date: 'Oct 2025' },
+    { file: 'certs/udemy-python.pdf', img: 'certs/udemy-python.png', icon: '📄', kind: 'PDF', title: 'The Complete Python Bootcamp', issuer: 'Udemy', date: 'Aug 2025' },
+    { file: 'certs/hackerrank-sql-advanced.pdf', img: 'certs/hackerrank-sql-advanced.png', icon: '📄', kind: 'PDF', title: 'SQL (Advanced)', issuer: 'HackerRank', date: 'Sep 2025' },
+    { file: 'certs/hackerrank-python.pdf', img: 'certs/hackerrank-python.png', icon: '📄', kind: 'PDF', title: 'Python (Basic)', issuer: 'HackerRank', date: 'Sep 2025' },
+    { file: 'certs/ess-volleyball.pdf', img: 'certs/ess-volleyball.png', icon: '📄', kind: 'PDF', title: 'Volleyball — Winner', issuer: 'Earth Science Society, IIT Kanpur', date: '2025' },
+    { file: 'certs/ess-chess.pdf',    img: 'certs/ess-chess.png',    icon: '📄', kind: 'PDF', title: 'Chess — 2nd Runner Up', issuer: 'Earth Science Society, IIT Kanpur', date: '2025' },
+  ];
+
+  function certCard(c) {
+    return `
+      <div style="width:280px;flex:0 0 auto;background:#fff;border:1px solid var(--line);border-radius:12px;overflow:hidden;box-shadow:0 8px 24px -18px rgba(25,21,16,.5);">
+        <div style="aspect-ratio:4/3;position:relative;background:var(--light-clay);border-bottom:1.5px dashed rgba(193,127,62,.35);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:.5rem;">
+          <div class="ph-fallback" style="display:flex;flex-direction:column;align-items:center;gap:.5rem;">
+            <div style="font-size:1.9rem;">${c.icon}</div>
+          </div>
+          <img src="${c.img}" alt="${c.title}" onerror="this.style.display='none'" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;">
+        </div>
+        <div style="padding:1.1rem 1.3rem;">
+          <h4 style="font-size:1rem;font-weight:600;margin-bottom:.3rem;line-height:1.3;">${c.title}</h4>
+          <div style="font-size:.85rem;color:var(--warm-gray);">${c.issuer}</div>
+          <div style="display:flex;justify-content:space-between;align-items:center;margin-top:.5rem;">
+            <span style="font-size:.78rem;color:var(--clay);font-weight:600;">${c.date}</span>
+            <a href="${c.file}" target="_blank" style="font-size:.75rem;color:var(--clay);text-decoration:none;border:1px solid rgba(193,127,62,.4);border-radius:5px;padding:.2rem .6rem;">View ${c.kind} →</a>
+          </div>
+        </div>
+      </div>`;
+  }
+
+  const track = document.getElementById('cert-track');
+  const loop = certificates.concat(certificates);
+  track.innerHTML = loop.map(certCard).join('');
+
+  // Hide "place file" placeholders once the real image loads successfully
+  document.querySelectorAll('img').forEach(img => {
+    img.addEventListener('load', () => {
+      const fallback = img.parentElement && img.parentElement.querySelector('.ph-fallback');
+      if (fallback) fallback.style.display = 'none';
+    });
+  });
+
+  // Button lift on hover
+  document.querySelectorAll('.btn-lift').forEach(el => {
+    el.addEventListener('mouseover', () => el.style.transform = 'translateY(-2px)');
+    el.addEventListener('mouseout', () => el.style.transform = 'translateY(0)');
   });
 </script>
+
 </body>
 </html>
