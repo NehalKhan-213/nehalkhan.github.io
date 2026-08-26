@@ -361,6 +361,13 @@
       <img src="coding.png" alt="Research &amp; Data Science Work" onerror="this.style.display='none'" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;">
       <div style="position:absolute;bottom:0;left:0;right:0;background:linear-gradient(transparent,rgba(25,21,16,.88));color:#fff;font-size:.78rem;padding:2rem .8rem .65rem;">Research &amp; Data Science Work</div>
     </div>
+    <div data-slot="lab" style="aspect-ratio:4/3;border-radius:12px;overflow:hidden;position:relative;background:var(--light-clay);border:1.5px dashed rgba(193,127,62,.35);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:.5rem;transition:transform .2s;">
+      <div class="ph-fallback" style="display:flex;flex-direction:column;align-items:center;gap:.5rem;">
+        <div style="font-size:1.9rem;">🧪</div>
+      </div>
+      <img src="erw-team.jpg" alt="ERW Project Team – Advanced Mass Spectrometry Laboratory, IIT Kanpur" onerror="this.style.display='none'" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;">
+      <div style="position:absolute;bottom:0;left:0;right:0;background:linear-gradient(transparent,rgba(25,21,16,.88));color:#fff;font-size:.78rem;padding:2rem .8rem .65rem;">ERW Project Team – Advanced Mass Spectrometry Laboratory, IIT Kanpur</div>
+    </div>
     <div data-slot="campus" style="aspect-ratio:4/3;border-radius:12px;overflow:hidden;position:relative;background:var(--light-clay);border:1.5px dashed rgba(193,127,62,.35);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:.5rem;transition:transform .2s;">
       <div class="ph-fallback" style="display:flex;flex-direction:column;align-items:center;gap:.5rem;">
         <div style="font-size:1.9rem;">🥇</div>
@@ -527,6 +534,7 @@
   const certificates = [
   { file: 'gold-medal.jpg', img: 'gold-medal.jpg', icon: '🥇', kind: 'photo', title: 'Dr. Vishwanath Bajpai Award — Best Thesis & Academic Excellence', issuer: '59th Convocation, IIT Kanpur', date: '2026' },
   { file: 'academic-excellence.jpg', img: 'academic-excellence.jpg', icon: '🏆', kind: 'photo', title: 'Academic Excellence Award', issuer: 'IIT Kanpur', date: 'Jan 2025' },
+  { file: 'fitsol-decarbonization.jpg', img: 'fitsol-decarbonization.jpg', icon: '🏆', kind: 'photo', title: 'Fitsol Strategy Challenge: Driving Decarbonization at Scale', issuer: "Prabandhan'26 · DoMS, IIT Kanpur · Unstop", date: '2026', externalLink: 'https://unstop.com/certificate-preview/b43b6592-33ad-4667-846a-b88f9207e478' },
   { file: 'internship.pdf', img: 'internship.png', icon: '📄', kind: 'PDF', title: 'Data Science Internship', issuer: 'Edgenius Skillfied Mentor Pvt Ltd', date: 'Aug 2025' },
   { file: 'powerbi.pdf', img: 'powerbi.png', icon: '📄', kind: 'PDF', title: 'Power BI Workshop', issuer: 'OfficeMaster', date: 'Aug 2025' },
   { file: 'matlab-onramp.pdf', img: 'matlab-onramp.png', icon: '📄', kind: 'PDF', title: 'MATLAB Onramp', issuer: 'MathWorks', date: 'May 2025' },
@@ -541,6 +549,7 @@
 ];
 
   function certCard(c) {
+    const linkHref = c.externalLink || c.file;
     return `
       <div style="width:280px;flex:0 0 auto;background:#fff;border:1px solid var(--line);border-radius:12px;overflow:hidden;box-shadow:0 8px 24px -18px rgba(25,21,16,.5);">
         <div style="aspect-ratio:4/3;position:relative;background:var(--light-clay);border-bottom:1.5px dashed rgba(193,127,62,.35);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:.5rem;">
@@ -554,7 +563,7 @@
           <div style="font-size:.85rem;color:var(--warm-gray);">${c.issuer}</div>
           <div style="display:flex;justify-content:space-between;align-items:center;margin-top:.5rem;">
             <span style="font-size:.78rem;color:var(--clay);font-weight:600;">${c.date}</span>
-            <a href="${c.file}" target="_blank" style="font-size:.75rem;color:var(--clay);text-decoration:none;border:1px solid rgba(193,127,62,.4);border-radius:5px;padding:.2rem .6rem;">View ${c.kind} →</a>
+            <a href="${linkHref}" target="_blank" style="font-size:.75rem;color:var(--clay);text-decoration:none;border:1px solid rgba(193,127,62,.4);border-radius:5px;padding:.2rem .6rem;">View ${c.kind} →</a>
           </div>
         </div>
       </div>`;
